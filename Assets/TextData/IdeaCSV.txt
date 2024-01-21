@@ -1,0 +1,7 @@
+Idea,Niceness,Cost,Randomness
+Do nothing,0,0,0
+Throw them in a volcano!,0,0.5,0.5
+Dance off!,0.5,0,1
+Steal the moon!,0.25,1,1
+Give them a raise!,1,1,0
+Pizza party?,1,0.5,0

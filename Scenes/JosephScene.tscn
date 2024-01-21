@@ -1,22 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=12 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_mb0ix"]
 [ext_resource type="Script" path="res://Scripts/UI/TextBox.cs" id="2_3fu8g"]
 [ext_resource type="Theme" uid="uid://bvkg25ovmdgtf" path="res://Assets/UI/TmpUITheme.tres" id="3_4kbe3"]
+[ext_resource type="Resource" uid="uid://cirwgam2txtij" path="res://Assets/TextData/NameSplice.tres" id="4_a6gw5"]
 [ext_resource type="Script" path="res://Scripts/UI/IdeaButton.cs" id="4_gapkk"]
+[ext_resource type="Resource" uid="uid://chd1b40khvu6d" path="res://Assets/TextData/ThreatSplice.tres" id="5_oxmn8"]
 
 [sub_resource type="Animation" id="Animation_b66r8"]
 resource_name = "Prompt"
-length = 10.0
+length = 14.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cutscene Prompt/Boss Group:visible")
+tracks/0/path = NodePath("Cutscene/Boss Group:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 9.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -24,11 +26,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Cutscene Prompt/Board Group:visible")
+tracks/1/path = NodePath("Cutscene/Board Group:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 9.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -36,11 +38,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Cutscene Prompt/Camera2D/Control/TextBox:visible")
+tracks/2/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 3.8, 4, 5.5, 7),
+"times": PackedFloat32Array(0, 0.5, 9, 9.2, 10.7, 12.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false, true]
@@ -48,11 +50,11 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Cutscene Prompt/Board Group:position")
+tracks/3/path = NodePath("Cutscene/Board Group:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 6, 7),
+"times": PackedFloat32Array(0, 11.2, 12.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 0), Vector2(-500, 0)]
@@ -60,7 +62,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene Prompt/Boss Group:position")
+tracks/4/path = NodePath("Cutscene/Boss Group:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -72,46 +74,46 @@ tracks/4/keys = {
 tracks/5/type = "method"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene Prompt/Camera2D/Control/TextBox/Text")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 3, 3.8, 4, 5.5, 7),
+"times": PackedFloat32Array(0, 0.5, 3, 6, 9, 9.2, 10.7, 12.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["", false],
 "method": &"SetText"
 }, {
-"args": ["Prompt 1", true],
+"args": ["Okay everyone, [PERSON] quit!", true],
 "method": &"SetText"
 }, {
-"args": ["Prompt 2", true],
+"args": ["I threatened them with [THREAT]", true],
 "method": &"SetText"
 }, {
-"args": ["Prompt 3", true],
-"method": &"SetText"
-}, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["Prompt 4", true],
+"args": ["Now they want to sue us!", true],
 "method": &"SetText"
 }, {
 "args": ["", false],
 "method": &"SetText"
 }, {
-"args": ["Idea Needed", true],
+"args": ["I need ideas! Now!", true],
+"method": &"SetText"
+}, {
+"args": ["", false],
+"method": &"SetText"
+}, {
+"args": ["What do you have to suggest?", true],
 "method": &"SetText"
 }]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 1:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 7.5),
+"times": PackedFloat32Array(0, 12.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -119,11 +121,11 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 2:visible")
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 7.7),
+"times": PackedFloat32Array(0, 12.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -131,11 +133,11 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 3:visible")
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 7.9),
+"times": PackedFloat32Array(0, 13.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -143,11 +145,11 @@ tracks/8/keys = {
 tracks/9/type = "method"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 1")
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(7.5),
+"times": PackedFloat32Array(12.7),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -157,11 +159,11 @@ tracks/9/keys = {
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 2")
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(7.7),
+"times": PackedFloat32Array(12.9),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -171,60 +173,352 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Cutscene Prompt/Camera2D/Control/Ideas/Idea 3")
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(7.9),
+"times": PackedFloat32Array(13.1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"GetNewIdea"
 }]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_lqcf4"]
 length = 0.001
 
+[sub_resource type="Animation" id="Animation_lnkiv"]
+resource_name = "Judging"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Boss Group:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Boss Group:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1000, 0), Vector2(-1000, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene/Board Group:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.5, 5.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene/Board Group:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 4.5, 5.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-500, 0), Vector2(0, 0), Vector2(0, 0), Vector2(1000, 0), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 5.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 3, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2, 4, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox/Text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1, 3, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [0, true],
+"method": &"DisplayChoice"
+}, {
+"args": ["", false],
+"method": &"SetText"
+}, {
+"args": ["Wait what!?", true],
+"method": &"SetText"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2/Text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.5, 3.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [1, true],
+"method": &"DisplayChoice"
+}, {
+"args": ["", false],
+"method": &"SetText"
+}, {
+"args": ["Excuse me?!", true],
+"method": &"SetText"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3/Text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2, 4, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [2, true],
+"method": &"DisplayChoice"
+}, {
+"args": ["", false],
+"method": &"SetText"
+}, {
+"args": ["Catapault!?", true],
+"method": &"SetText"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(5.5, 8.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": ["Those are the WORST IDEAS I have EVER heard!", true],
+"method": &"SetText"
+}, {
+"args": ["That's it. I'm getting the catapault!", true],
+"method": &"SetText"
+}, {
+"args": ["", false],
+"method": &"SetText"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gy0st"]
 _data = {
+"Judging": SubResource("Animation_lnkiv"),
 "Prompt": SubResource("Animation_b66r8"),
 "RESET": SubResource("Animation_lqcf4")
 }
 
 [node name="JosephScene" type="Node2D"]
 
-[node name="Cutscene Prompt" type="Node2D" parent="."]
+[node name="Cutscene" type="Node2D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene Prompt"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
 root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_gy0st")
 }
 autoplay = "Prompt"
+speed_scale = 0.75
 script = ExtResource("1_088j6")
 
-[node name="Background" type="Sprite2D" parent="Cutscene Prompt"]
+[node name="Background" type="Sprite2D" parent="Cutscene"]
 texture_filter = 1
 texture = ExtResource("1_mb0ix")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 910, 512)
 
-[node name="Camera2D" type="Camera2D" parent="Cutscene Prompt"]
-anchor_mode = 0
+[node name="Camera2D" type="Camera2D" parent="Cutscene"]
+position = Vector2(455, 256)
 zoom = Vector2(1.265, 1.265)
+editor_draw_limits = true
 
-[node name="Control" type="Control" parent="Cutscene Prompt/Camera2D"]
+[node name="Boss Group" type="Node2D" parent="Cutscene"]
+visible = false
+
+[node name="Boss" type="Sprite2D" parent="Cutscene/Boss Group"]
+position = Vector2(97, 318)
+scale = Vector2(0.762396, 0.762396)
+texture = ExtResource("1_mb0ix")
+region_enabled = true
+region_rect = Rect2(911, 0, 256, 512)
+
+[node name="Board Group" type="Node2D" parent="Cutscene"]
+
+[node name="Board Person 1" type="Sprite2D" parent="Cutscene/Board Group"]
+position = Vector2(149, 358)
+scale = Vector2(0.605469, 0.605469)
+texture = ExtResource("1_mb0ix")
+region_enabled = true
+region_rect = Rect2(911, 0, 256, 512)
+
+[node name="Board Person 2" type="Sprite2D" parent="Cutscene/Board Group"]
+position = Vector2(435, 344)
+scale = Vector2(0.65625, 0.65625)
+texture = ExtResource("1_mb0ix")
+region_enabled = true
+region_rect = Rect2(911, 0, 256, 512)
+
+[node name="Board Person 3" type="Sprite2D" parent="Cutscene/Board Group"]
+position = Vector2(747, 350)
+scale = Vector2(0.638898, 0.638898)
+texture = ExtResource("1_mb0ix")
+region_enabled = true
+region_rect = Rect2(911, 0, 256, 512)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Cutscene"]
+
+[node name="Control" type="Control" parent="Cutscene/CanvasLayer"]
 custom_minimum_size = Vector2(910, 512)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 910.0
-offset_bottom = 512.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextBox" type="NinePatchRect" parent="Cutscene Prompt/Camera2D/Control"]
+[node name="TextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 visible = false
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 1
@@ -241,7 +535,7 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="Text" type="Label" parent="Cutscene Prompt/Camera2D/Control/TextBox"]
+[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/TextBox"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -254,8 +548,126 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_3fu8g")
 speed = 25.0
+spliceData = Array[Resource]([ExtResource("4_a6gw5"), ExtResource("5_oxmn8")])
 
-[node name="Ideas" type="Control" parent="Cutscene Prompt/Camera2D/Control"]
+[node name="CharacterTextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -189.0
+offset_right = -197.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("1_mb0ix")
+region_rect = Rect2(0, 512, 256, 256)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_3fu8g")
+speed = 25.0
+
+[node name="CharacterTextBox2" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -189.0
+offset_right = 97.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("1_mb0ix")
+region_rect = Rect2(0, 512, 256, 256)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_3fu8g")
+speed = 25.0
+
+[node name="CharacterTextBox3" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 188.0
+offset_top = -189.0
+offset_right = 399.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("1_mb0ix")
+region_rect = Rect2(0, 512, 256, 256)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_3fu8g")
+speed = 25.0
+
+[node name="Ideas" type="Control" parent="Cutscene/CanvasLayer/Control"]
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 1
 anchors_preset = 11
@@ -268,7 +680,7 @@ offset_bottom = -60.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Idea 1" type="Button" parent="Cutscene Prompt/Camera2D/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+[node name="Idea 1" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
 visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -282,7 +694,7 @@ text = "Idea 1"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
-[node name="Idea 2" type="Button" parent="Cutscene Prompt/Camera2D/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+[node name="Idea 2" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
 visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -294,7 +706,7 @@ text = "Idea 2"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
-[node name="Idea 3" type="Button" parent="Cutscene Prompt/Camera2D/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+[node name="Idea 3" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
 visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -306,40 +718,6 @@ text = "Idea 3"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
-[node name="Boss Group" type="Node2D" parent="Cutscene Prompt"]
-position = Vector2(-1000, 0)
-
-[node name="Boss" type="Sprite2D" parent="Cutscene Prompt/Boss Group"]
-position = Vector2(97, 318)
-scale = Vector2(0.762396, 0.762396)
-texture = ExtResource("1_mb0ix")
-region_enabled = true
-region_rect = Rect2(911, 0, 256, 512)
-
-[node name="Board Group" type="Node2D" parent="Cutscene Prompt"]
-visible = false
-
-[node name="Board Person 1" type="Sprite2D" parent="Cutscene Prompt/Board Group"]
-position = Vector2(149, 358)
-scale = Vector2(0.605469, 0.605469)
-texture = ExtResource("1_mb0ix")
-region_enabled = true
-region_rect = Rect2(911, 0, 256, 512)
-
-[node name="Board Person 2" type="Sprite2D" parent="Cutscene Prompt/Board Group"]
-position = Vector2(435, 344)
-scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("1_mb0ix")
-region_enabled = true
-region_rect = Rect2(911, 0, 256, 512)
-
-[node name="Board Person 3" type="Sprite2D" parent="Cutscene Prompt/Board Group"]
-position = Vector2(747, 350)
-scale = Vector2(0.638898, 0.638898)
-texture = ExtResource("1_mb0ix")
-region_enabled = true
-region_rect = Rect2(911, 0, 256, 512)
-
-[connection signal="pressed" from="Cutscene Prompt/Camera2D/Control/Ideas/Idea 1" to="Cutscene Prompt/Camera2D/Control/Ideas/Idea 1" method="OnPress"]
-[connection signal="pressed" from="Cutscene Prompt/Camera2D/Control/Ideas/Idea 2" to="Cutscene Prompt/Camera2D/Control/Ideas/Idea 2" method="OnPress"]
-[connection signal="pressed" from="Cutscene Prompt/Camera2D/Control/Ideas/Idea 3" to="Cutscene Prompt/Camera2D/Control/Ideas/Idea 3" method="OnPress"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea 1" method="OnPress"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea 2" method="OnPress"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 3" to="Cutscene/CanvasLayer/Control/Ideas/Idea 3" method="OnPress"]
