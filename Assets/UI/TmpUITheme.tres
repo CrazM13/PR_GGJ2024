@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bvkg25ovmdgtf"]
+
+[ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_h2vha"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yryjx"]
+texture = ExtResource("1_h2vha")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(256, 512, 256, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anj1b"]
+texture = ExtResource("1_h2vha")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(0, 512, 256, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aplg7"]
+texture = ExtResource("1_h2vha")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(768, 512, 256, 256)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_yryjx")
+Button/styles/focus = SubResource("StyleBoxTexture_anj1b")
+Button/styles/hover = SubResource("StyleBoxTexture_aplg7")
+Button/styles/normal = SubResource("StyleBoxTexture_anj1b")
