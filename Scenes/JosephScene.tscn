@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=18 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_mb0ix"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dkm2qoqdulequ" path="res://Assets/Characters/Board_Person_2.png" id="5_803ee"]
 [ext_resource type="Resource" uid="uid://chd1b40khvu6d" path="res://Assets/TextData/ThreatSplice.tres" id="5_oxmn8"]
 [ext_resource type="Texture2D" uid="uid://ty74fhl6setd" path="res://Assets/Characters/Board_Person_3.png" id="6_68bon"]
+[ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="7_yf2vn"]
 
 [sub_resource type="Animation" id="Animation_lnkiv"]
 resource_name = "Judging"
@@ -530,12 +531,11 @@ offset_bottom = 32.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-texture = ExtResource("1_mb0ix")
-region_rect = Rect2(0, 512, 256, 256)
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
+texture = ExtResource("7_yf2vn")
+patch_margin_left = 287
+patch_margin_top = 26
+patch_margin_right = 172
+patch_margin_bottom = 102
 
 [node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/TextBox"]
 layout_mode = 1
