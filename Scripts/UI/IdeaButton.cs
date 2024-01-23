@@ -27,7 +27,7 @@ public partial class IdeaButton : Button {
 
 		ideas.SetChoice(2, ideaIndex);
 
-		cutscene.PlayScene("Judging");
+		cutscene.MoveToNextScene();
 	}
 
 }

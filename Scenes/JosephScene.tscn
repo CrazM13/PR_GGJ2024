@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=21 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="Script" path="res://Scripts/UI/TextBox.cs" id="2_3fu8g"]
@@ -24,10 +24,10 @@ tracks/0/path = NodePath("Cutscene/Boss Group:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -48,10 +48,10 @@ tracks/2/path = NodePath("Cutscene/Board Group:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 4.5, 5.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, true, false, true]
+"values": [true, true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -60,10 +60,10 @@ tracks/3/path = NodePath("Cutscene/Board Group:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 4.5, 5.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-500, 0), Vector2(0, 0), Vector2(0, 0), Vector2(1000, 0), Vector2(0, 0)]
+"values": [Vector2(-500, 0), Vector2(0, 0), Vector2(0, 0), Vector2(1000, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -108,10 +108,10 @@ tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 5.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, true]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -120,10 +120,10 @@ tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible"
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1, 3, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false, true]
+"values": [false, true, false]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -132,10 +132,10 @@ tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false, true]
+"values": [false, true, false]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -144,10 +144,10 @@ tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visibl
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 2, 4, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false, true]
+"values": [false, true, false]
 }
 tracks/11/type = "method"
 tracks/11/imported = false
@@ -156,16 +156,13 @@ tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox/Text")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(1, 3, 12),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [0, true],
+"args": [0],
 "method": &"DisplayChoice"
 }, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["Wait what!?", true],
+"args": [""],
 "method": &"SetText"
 }]
 }
@@ -176,16 +173,13 @@ tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2/Text")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(1.5, 3.5, 12),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1.5, 3.5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [1, true],
+"args": [1],
 "method": &"DisplayChoice"
 }, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["Excuse me?!", true],
+"args": [""],
 "method": &"SetText"
 }]
 }
@@ -196,16 +190,13 @@ tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3/Text")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(2, 4, 12),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [2, true],
+"args": [2],
 "method": &"DisplayChoice"
 }, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["Catapault!?", true],
+"args": [""],
 "method": &"SetText"
 }]
 }
@@ -216,17 +207,17 @@ tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(5.5, 8.5, 12),
+"times": PackedFloat32Array(0, 5.4, 5.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
-"args": ["Those are the WORST IDEAS I have EVER heard!", true],
+"args": [""],
 "method": &"SetText"
 }, {
-"args": ["That's it. I'm getting the catapault!", true],
-"method": &"SetText"
+"args": [true],
+"method": &"AllowInput"
 }, {
-"args": ["", false],
-"method": &"SetText"
+"args": [PackedStringArray("Those are the WORST IDEAS I have EVER heard!", "That\'s it. I\'m getting the catapault!")],
+"method": &"QueueTexts"
 }]
 }
 
@@ -240,10 +231,10 @@ tracks/0/path = NodePath("Cutscene/Boss Group:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 9.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true, false]
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -252,10 +243,10 @@ tracks/1/path = NodePath("Cutscene/Board Group:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 9.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true]
+"values": [false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -264,10 +255,10 @@ tracks/2/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 9, 9.2, 10.7, 12.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, false, true, false, true]
+"values": [false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -276,10 +267,10 @@ tracks/3/path = NodePath("Cutscene/Board Group:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 11.2, 12.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-500, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -300,31 +291,199 @@ tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5, 3, 6, 9, 9.2, 10.7, 12.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": ["", false],
-"method": &"SetText"
+"args": [true],
+"method": &"AllowInput"
 }, {
-"args": ["Okay everyone, [PERSON] quit!", true],
-"method": &"SetText"
-}, {
-"args": ["I threatened them with [THREAT]", true],
-"method": &"SetText"
-}, {
-"args": ["Now they want to sue us!", true],
-"method": &"SetText"
-}, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["I need ideas! Now!", true],
-"method": &"SetText"
-}, {
-"args": ["", false],
-"method": &"SetText"
-}, {
-"args": ["What do you have to suggest?", true],
+"args": [PackedStringArray("Okay everyone, [PERSON] quit!", "I threatened them with [THREAT]", "Now they want to sue us!")],
+"method": &"QueueTexts"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lqcf4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_kjhbp"]
+resource_name = "PromptStage2"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Boss Group:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Board Group:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene/Board Group:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene/Boss Group:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["I need ideas! Now!"],
 "method": &"SetText"
 }]
 }
@@ -335,7 +494,193 @@ tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 12.7),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_gv7gl"]
+resource_name = "PromptStage3"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Boss Group:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Board Group:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene/Board Group:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-500, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene/Boss Group:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"AllowInput"
+}, {
+"args": ["What do you have to suggest?"],
+"method": &"SetText"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -347,7 +692,7 @@ tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 12.9),
+"times": PackedFloat32Array(0, 1.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -359,7 +704,7 @@ tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 13.1),
+"times": PackedFloat32Array(0, 1.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -371,7 +716,7 @@ tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(12.7),
+"times": PackedFloat32Array(1.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -385,7 +730,7 @@ tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(12.9),
+"times": PackedFloat32Array(1.7),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -399,7 +744,7 @@ tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(13.1),
+"times": PackedFloat32Array(1.9),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -443,13 +788,205 @@ tracks/14/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_lqcf4"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_pro8y"]
+resource_name = "JudgingStage2"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Boss Group:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Boss Group:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene/Board Group:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene/Board Group:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/TextBox:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox/Text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["Wait what!?"],
+"method": &"SetText"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox2/Text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["Excuse me?!"],
+"method": &"SetText"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3/Text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["Catapault!?"],
+"method": &"SetText"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Cutscene/CanvasLayer/Control/TextBox/Text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"AllowInput"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gy0st"]
 _data = {
 "Judging": SubResource("Animation_lnkiv"),
+"JudgingStage2": SubResource("Animation_pro8y"),
 "Prompt": SubResource("Animation_b66r8"),
+"PromptStage2": SubResource("Animation_kjhbp"),
+"PromptStage3": SubResource("Animation_gv7gl"),
 "RESET": SubResource("Animation_lqcf4")
 }
 
@@ -465,6 +1002,7 @@ libraries = {
 autoplay = "Prompt"
 speed_scale = 0.75
 script = ExtResource("1_088j6")
+sceneList = PackedStringArray("Prompt", "PromptStage2", "PromptStage3", "Judging", "JudgingStage2")
 
 [node name="Background" type="Sprite2D" parent="Cutscene"]
 texture_filter = 1
@@ -480,7 +1018,7 @@ zoom = Vector2(1.265, 1.265)
 editor_draw_limits = true
 
 [node name="Boss Group" type="Node2D" parent="Cutscene"]
-visible = false
+position = Vector2(-99.9999, 0)
 
 [node name="Boss" type="Sprite2D" parent="Cutscene/Boss Group"]
 position = Vector2(97, 392)
@@ -489,7 +1027,7 @@ texture = ExtResource("3_uemyf")
 region_rect = Rect2(911, 0, 256, 512)
 
 [node name="Board Group" type="Node2D" parent="Cutscene"]
-position = Vector2(-500, 0)
+position = Vector2(900, 0)
 
 [node name="Board Person 1" type="Sprite2D" parent="Cutscene/Board Group"]
 position = Vector2(149, 410)
@@ -523,6 +1061,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
+visible = false
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 1
 anchors_preset = 10
@@ -537,7 +1076,7 @@ patch_margin_top = 26
 patch_margin_right = 172
 patch_margin_bottom = 102
 
-[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/TextBox"]
+[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/TextBox" node_paths=PackedStringArray("cutscene")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -550,6 +1089,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 script = ExtResource("2_3fu8g")
+cutscene = NodePath("../../../../AnimationPlayer")
 speed = 25.0
 spliceData = Array[Resource]([ExtResource("4_a6gw5"), ExtResource("5_oxmn8")])
 
@@ -593,7 +1133,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("2_3fu8g")
 speed = 25.0
@@ -638,7 +1177,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("2_3fu8g")
 speed = 25.0
@@ -683,7 +1221,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("2_3fu8g")
 speed = 25.0
@@ -702,6 +1239,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Idea 1" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 1
@@ -717,6 +1255,7 @@ script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
 [node name="Idea 2" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 6
@@ -735,6 +1274,7 @@ script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
 [node name="Idea 3" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
+visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 3
