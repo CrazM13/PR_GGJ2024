@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://g1vy2dmmbv5l"]
+
+[ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_00kjq"]
+[ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_np2n0"]
+[ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="3_5gnf4"]
+[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="4_o5fu5"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_00kjq")
+
+[node name="MarginContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title Container" type="Control" parent="MarginContainer"]
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="MarginContainer/Title Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="Panel" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 50.0
+offset_right = -97.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "How to play: Click an option. yay"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Options Container" type="GridContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(368, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+columns = 2
+
+[node name="Play" type="Button" parent="MarginContainer/Options Container"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+icon = ExtResource("2_np2n0")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Quit" type="Button" parent="MarginContainer/Options Container"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+icon = ExtResource("3_5gnf4")
+expand_icon = true
+
+[node name="SceneManager" type="Node" parent="MarginContainer"]
+script = ExtResource("4_o5fu5")
+
+[connection signal="pressed" from="MarginContainer/Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
+[connection signal="pressed" from="MarginContainer/Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]

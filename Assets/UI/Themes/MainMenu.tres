@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cxtiw3a3c14hy"]
+
+[ext_resource type="Texture2D" uid="uid://2eonoorefy0j" path="res://Assets/UI/Sprites/ComicButton.png" id="1_m83g1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyina"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hw0lw"]
+texture = ExtResource("1_m83g1")
+texture_margin_left = 48.0
+texture_margin_top = 58.0
+texture_margin_right = 94.0
+texture_margin_bottom = 99.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0.792157, 0.792157, 0.792157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvxwm"]
+texture = ExtResource("1_m83g1")
+texture_margin_left = 48.0
+texture_margin_top = 58.0
+texture_margin_right = 94.0
+texture_margin_bottom = 99.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1ekx"]
+texture = ExtResource("1_m83g1")
+texture_margin_left = 48.0
+texture_margin_top = 58.0
+texture_margin_right = 94.0
+texture_margin_bottom = 99.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0.482353, 0.482353, 0.482353, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gboai"]
+texture = ExtResource("1_m83g1")
+texture_margin_left = 84.0
+texture_margin_top = 59.0
+texture_margin_right = 94.0
+texture_margin_bottom = 94.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 24
+Button/font_sizes/font_size = 45
+Button/styles/focus = SubResource("StyleBoxEmpty_hyina")
+Button/styles/hover = SubResource("StyleBoxTexture_hw0lw")
+Button/styles/normal = SubResource("StyleBoxTexture_nvxwm")
+Button/styles/pressed = SubResource("StyleBoxTexture_k1ekx")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 32
+Label/font_sizes/font_size = 48
+Panel/styles/panel = SubResource("StyleBoxTexture_gboai")
