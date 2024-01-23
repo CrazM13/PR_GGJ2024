@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=18 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="Script" path="res://Scripts/UI/TextBox.cs" id="2_3fu8g"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://chd1b40khvu6d" path="res://Assets/TextData/ThreatSplice.tres" id="5_oxmn8"]
 [ext_resource type="Texture2D" uid="uid://ty74fhl6setd" path="res://Assets/Characters/Board_Person_3.png" id="6_68bon"]
 [ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="7_yf2vn"]
+[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="13_jigvq"]
 
 [sub_resource type="Animation" id="Animation_lnkiv"]
 resource_name = "Judging"
@@ -750,6 +751,11 @@ theme = ExtResource("3_4kbe3")
 text = "Idea 3"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_jigvq")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea 1" method="OnPress"]
 [connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea 2" method="OnPress"]

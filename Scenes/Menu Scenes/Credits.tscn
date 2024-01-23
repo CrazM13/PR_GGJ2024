@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://g71tv0whui0p"]
+[gd_scene load_steps=6 format=3 uid="uid://g71tv0whui0p"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_2ltkk"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_1shov"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="3_j8pqs"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="4_gc276"]
+[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="5_4g4qn"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -130,6 +131,11 @@ expand_icon = true
 
 [node name="SceneManager" type="Node" parent="MarginContainer"]
 script = ExtResource("4_gc276")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4g4qn")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
 [connection signal="pressed" from="MarginContainer/Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]

@@ -19,7 +19,6 @@ public partial class TextBox : Label {
 			this.Text = targetText = text;
 			progress = text.Length + 1;
 		}
-		
 	}
 
 	public void DisplayIdea(int ideaIndex, bool animate = false) {
@@ -40,6 +39,10 @@ public partial class TextBox : Label {
 			int index = Mathf.FloorToInt(progress);
 
 			this.Text = targetText[..index];
+		}
+
+		if (Input.IsMouseButtonPressed(MouseButton.Left)) {
+
 		}
 
 	}

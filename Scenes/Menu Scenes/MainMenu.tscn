@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://eao0wesfmqf6"]
+[gd_scene load_steps=8 format=3 uid="uid://eao0wesfmqf6"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dy3hhthid44v1" path="res://Assets/UI/Sprites/IconCredits.png" id="4_jon60"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="5_vbjku"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
+[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="7_ujjxh"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -84,6 +85,11 @@ expand_icon = true
 
 [node name="SceneManager" type="Node" parent="."]
 script = ExtResource("6_x34nf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ujjxh")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/Options Container/Play" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
 [connection signal="pressed" from="MarginContainer/Options Container/Instructions" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Instructions.tscn"]]
