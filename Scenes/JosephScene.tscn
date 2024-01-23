@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=17 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
-[ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_mb0ix"]
 [ext_resource type="Script" path="res://Scripts/UI/TextBox.cs" id="2_3fu8g"]
 [ext_resource type="Texture2D" uid="uid://dx0u05ww76kkb" path="res://Assets/Backgrounds/Board_Room_Textured.png" id="2_4vdir"]
 [ext_resource type="Theme" uid="uid://bvkg25ovmdgtf" path="res://Assets/UI/TmpUITheme.tres" id="3_4kbe3"]
@@ -480,6 +479,7 @@ zoom = Vector2(1.265, 1.265)
 editor_draw_limits = true
 
 [node name="Boss Group" type="Node2D" parent="Cutscene"]
+visible = false
 
 [node name="Boss" type="Sprite2D" parent="Cutscene/Boss Group"]
 position = Vector2(97, 392)
@@ -488,8 +488,7 @@ texture = ExtResource("3_uemyf")
 region_rect = Rect2(911, 0, 256, 512)
 
 [node name="Board Group" type="Node2D" parent="Cutscene"]
-visible = false
-position = Vector2(800, 0)
+position = Vector2(-500, 0)
 
 [node name="Board Person 1" type="Sprite2D" parent="Cutscene/Board Group"]
 position = Vector2(149, 410)
@@ -542,12 +541,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
+offset_left = 242.0
 offset_top = 16.0
-offset_right = -16.0
+offset_right = -110.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_4kbe3")
 script = ExtResource("2_3fu8g")
 speed = 25.0
 spliceData = Array[Resource]([ExtResource("4_a6gw5"), ExtResource("5_oxmn8")])
@@ -561,20 +561,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -479.0
-offset_top = -273.0
-offset_right = -268.0
-offset_bottom = -145.0
+offset_left = -556.0
+offset_top = -292.0
+offset_right = -100.0
+offset_bottom = -124.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 size_flags_horizontal = 3
 size_flags_vertical = 0
-texture = ExtResource("1_mb0ix")
-region_rect = Rect2(0, 512, 256, 256)
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
+texture = ExtResource("7_yf2vn")
+region_rect = Rect2(0, 0, 600, 200)
+patch_margin_left = 296
+patch_margin_top = 64
+patch_margin_right = 160
+patch_margin_bottom = 104
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox"]
 layout_mode = 1
@@ -587,6 +590,7 @@ offset_right = -16.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -602,20 +606,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.0
-offset_top = -274.0
-offset_right = 94.0
-offset_bottom = -146.0
+offset_left = -188.0
+offset_top = -289.0
+offset_right = 268.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 size_flags_horizontal = 3
 size_flags_vertical = 0
-texture = ExtResource("1_mb0ix")
-region_rect = Rect2(0, 512, 256, 256)
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
+texture = ExtResource("7_yf2vn")
+region_rect = Rect2(0, 0, 600, 200)
+patch_margin_left = 296
+patch_margin_top = 64
+patch_margin_right = 160
+patch_margin_bottom = 104
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox2"]
 layout_mode = 1
@@ -628,6 +635,7 @@ offset_right = -16.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -643,20 +651,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 255.0
-offset_top = -273.0
-offset_right = 466.0
-offset_bottom = -145.0
+offset_left = 175.0
+offset_top = -289.0
+offset_right = 631.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 size_flags_horizontal = 3
 size_flags_vertical = 0
-texture = ExtResource("1_mb0ix")
-region_rect = Rect2(0, 512, 256, 256)
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
+texture = ExtResource("7_yf2vn")
+region_rect = Rect2(0, 0, 600, 200)
+patch_margin_left = 296
+patch_margin_top = 64
+patch_margin_right = 160
+patch_margin_bottom = 104
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox3"]
 layout_mode = 1
@@ -669,6 +680,7 @@ offset_right = -16.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_4kbe3")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -689,38 +701,49 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Idea 1" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
 custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-offset_top = 4.0
-offset_right = 256.0
-offset_bottom = 84.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -511.0
+offset_bottom = 135.0
 grow_horizontal = 0
-grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 text = "Idea 1"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
 [node name="Idea 2" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
 custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-offset_top = 88.0
-offset_right = 256.0
-offset_bottom = 168.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -511.0
+offset_top = -67.5
+offset_bottom = 67.5
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("3_4kbe3")
 text = "Idea 2"
 script = ExtResource("4_gapkk")
 cutscene = NodePath("../../../../AnimationPlayer")
 
 [node name="Idea 3" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
 custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-offset_top = 172.0
-offset_right = 256.0
-offset_bottom = 252.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -511.0
+offset_top = -135.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("3_4kbe3")
 text = "Idea 3"
 script = ExtResource("4_gapkk")

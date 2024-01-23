@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bvkg25ovmdgtf"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bvkg25ovmdgtf"]
 
 [ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_h2vha"]
+[ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="2_mi88h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yryjx"]
 texture = ExtResource("1_h2vha")
@@ -11,12 +12,14 @@ texture_margin_bottom = 16.0
 region_rect = Rect2(256, 512, 256, 256)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anj1b"]
-texture = ExtResource("1_h2vha")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 16.0
-region_rect = Rect2(0, 512, 256, 256)
+texture = ExtResource("2_mi88h")
+texture_margin_left = 288.0
+texture_margin_top = 24.0
+texture_margin_right = 176.0
+texture_margin_bottom = 88.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 600, 200)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aplg7"]
 texture = ExtResource("1_h2vha")
@@ -31,3 +34,6 @@ Button/styles/disabled = SubResource("StyleBoxTexture_yryjx")
 Button/styles/focus = SubResource("StyleBoxTexture_anj1b")
 Button/styles/hover = SubResource("StyleBoxTexture_aplg7")
 Button/styles/normal = SubResource("StyleBoxTexture_anj1b")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 24
+Label/font_sizes/font_size = 32
