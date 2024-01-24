@@ -3,9 +3,9 @@
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_00kjq"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_np2n0"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="3_5gnf4"]
+[ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="3_ly5uo"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="4_o5fu5"]
 [ext_resource type="Texture2D" uid="uid://bd5bmd56xdrs7" path="res://Assets/Backgrounds/TV.png" id="4_phig2"]
-[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="5_84f2v"]
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -28,7 +28,7 @@ grow_vertical = 2
 script = ExtResource("4_o5fu5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_84f2v")
+stream = ExtResource("3_ly5uo")
 volume_db = -20.0
 autoplay = true
 

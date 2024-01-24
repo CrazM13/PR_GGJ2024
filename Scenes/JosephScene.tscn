@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=24 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
+[ext_resource type="AudioStream" uid="uid://ccsyjvhapcggi" path="res://Assets/Sounds/Reactions/Ay Dios Mios Edit.wav" id="1_ooy4j"]
 [ext_resource type="Script" path="res://Scripts/UI/TextBox.cs" id="2_3fu8g"]
 [ext_resource type="Texture2D" uid="uid://dx0u05ww76kkb" path="res://Assets/Backgrounds/Board_Room_Textured.png" id="2_4vdir"]
 [ext_resource type="Theme" uid="uid://bvkg25ovmdgtf" path="res://Assets/UI/TmpUITheme.tres" id="3_4kbe3"]
@@ -10,8 +11,9 @@
 [ext_resource type="SpriteFrames" uid="uid://cq1qikmn34f0f" path="res://Assets/Cutscenes/BoardPersonPoses.tres" id="4_mktue"]
 [ext_resource type="Resource" uid="uid://chd1b40khvu6d" path="res://Assets/TextData/ThreatSplice.tres" id="5_oxmn8"]
 [ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="7_yf2vn"]
+[ext_resource type="Resource" uid="uid://b4ks4uca7638v" path="res://Assets/TextData/ReactionSplice.tres" id="10_osbqw"]
 [ext_resource type="AudioStream" uid="uid://nv6kyarmo6wv" path="res://Assets/Sounds/SFX/KeyStroke.wav" id="12_s50x1"]
-[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="13_jigvq"]
+[ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="14_l6qcd"]
 
 [sub_resource type="Animation" id="Animation_pro8y"]
 resource_name = "JudgingEnd"
@@ -158,7 +160,7 @@ tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": ["Wait what!?"],
+"args": ["[REACTION]"],
 "method": &"SetText"
 }]
 }
@@ -172,7 +174,7 @@ tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": ["Excuse me?!"],
+"args": ["[REACTION]"],
 "method": &"SetText"
 }]
 }
@@ -186,7 +188,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": ["Catapault!?"],
+"args": ["[REACTION]"],
 "method": &"SetText"
 }]
 }
@@ -240,6 +242,21 @@ tracks/17/keys = {
 "update": 1,
 "values": [&"BP3 Panic"]
 }
+tracks/18/type = "audio"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Cutscene/ReactionSFX")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_ooy4j")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/18/use_blend = true
 
 [sub_resource type="Animation" id="Animation_ak8d6"]
 resource_name = "JudgingIdea1"
@@ -1770,6 +1787,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+spliceData = Array[Resource]([ExtResource("10_osbqw")])
 
 [node name="CharacterTextBox2" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 custom_minimum_size = Vector2(0, 128)
@@ -1815,6 +1833,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+spliceData = Array[Resource]([ExtResource("10_osbqw")])
 
 [node name="CharacterTextBox3" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 custom_minimum_size = Vector2(0, 128)
@@ -1860,6 +1879,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+spliceData = Array[Resource]([ExtResource("10_osbqw")])
 
 [node name="Ideas" type="Control" parent="Cutscene/CanvasLayer/Control"]
 custom_minimum_size = Vector2(256, 128)
@@ -1931,8 +1951,12 @@ cutscene = NodePath("../../../../AnimationPlayer")
 [node name="KeySFX" type="AudioStreamPlayer" parent="Cutscene/CanvasLayer/Control"]
 stream = ExtResource("12_s50x1")
 
+[node name="ReactionSFX" type="AudioStreamPlayer" parent="Cutscene"]
+stream = ExtResource("1_ooy4j")
+volume_db = -10.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_jigvq")
+stream = ExtResource("14_l6qcd")
 volume_db = -20.0
 autoplay = true
 

@@ -3,10 +3,10 @@
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
 [ext_resource type="Texture2D" uid="uid://3c4dh6pabouk" path="res://Assets/UI/Sprites/IconInstructions.png" id="3_e1yuf"]
+[ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="3_t81w6"]
 [ext_resource type="Texture2D" uid="uid://dy3hhthid44v1" path="res://Assets/UI/Sprites/IconCredits.png" id="4_jon60"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="5_vbjku"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
-[ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="7_ujjxh"]
 [ext_resource type="Texture2D" uid="uid://cswa2jmpbtuou" path="res://Assets/Backgrounds/Main_Menu_2.png" id="8_r7mdi"]
 
 [node name="MainMenu" type="Control"]
@@ -54,7 +54,7 @@ vertical_alignment = 1
 script = ExtResource("6_x34nf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_ujjxh")
+stream = ExtResource("3_t81w6")
 volume_db = -20.0
 autoplay = true
 
