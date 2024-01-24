@@ -9,7 +9,7 @@ public partial class CutsceneManager : AnimationPlayer {
 
 	public override void _Ready() {
 
-		PlayScene(sceneList[0]);
+		PlayScene(sceneList[currentScene]);
 
 		base._Ready();
 	}

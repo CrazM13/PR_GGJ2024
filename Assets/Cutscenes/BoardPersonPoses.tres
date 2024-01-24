@@ -1,0 +1,57 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cq1qikmn34f0f"]
+
+[ext_resource type="Texture2D" uid="uid://cmyu2cb4c11ov" path="res://Assets/Characters/Board_Person_1.png" id="1_epsuw"]
+[ext_resource type="Texture2D" uid="uid://ydfctgu3pbye" path="res://Assets/Characters/Boss.png" id="2_4cksn"]
+[ext_resource type="Texture2D" uid="uid://dkm2qoqdulequ" path="res://Assets/Characters/Board_Person_2.png" id="2_5h1qm"]
+[ext_resource type="Texture2D" uid="uid://ty74fhl6setd" path="res://Assets/Characters/Board_Person_3.png" id="3_1b5g0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_epsuw")
+}],
+"loop": true,
+"name": &"BP1 Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4cksn")
+}],
+"loop": true,
+"name": &"BP1 Panic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5h1qm")
+}],
+"loop": true,
+"name": &"BP2 Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4cksn")
+}],
+"loop": true,
+"name": &"BP2 Panic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1b5g0")
+}],
+"loop": true,
+"name": &"BP3 Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4cksn")
+}],
+"loop": true,
+"name": &"BP3 Panic",
+"speed": 5.0
+}]

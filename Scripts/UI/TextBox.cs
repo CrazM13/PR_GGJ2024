@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public partial class TextBox : Label {
 
 	[Export] private CutsceneManager cutscene;
+	[Export] private AudioStreamPlayer audio;
 	[Export] private float speed = 1;
 	[Export] private TextSplices[] spliceData;
 
@@ -66,10 +67,14 @@ public partial class TextBox : Label {
 		base._Process(delta);
 
 		if (progress < targetText.Length) {
+			int oldLength = this.Text.Length;
 			progress += (float) delta * speed * currentSpeedModifier;
 			int index = Mathf.FloorToInt(progress);
 
-			this.Text = targetText[..index];
+			if (oldLength != index) {
+				audio?.Play(0);
+				this.Text = targetText[..index];
+			}
 		}
 
 		if (allowInput) {
@@ -78,8 +83,7 @@ public partial class TextBox : Label {
 			if (isInputDown && !wasInputDown) {
 				if (progress < targetText.Length) {
 					currentSpeedModifier = 2f;
-				} else {
-
+				} else if (this.Text.Length > 0) {
 					if (textQueue.Count > 0) {
 						SetText(textQueue.Dequeue());
 					} else {
