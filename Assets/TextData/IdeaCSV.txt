@@ -1,7 +1,129 @@
 Idea,Niceness,Cost,Randomness
-Do nothing,0,0,0
+Take away their chair,0,0,0
+Flip them off!,0,0,0.1
+Slap them!,0,0,0.2
+Tell their grandma they've been bad!,0,0,0.3
+Zzzzzzzzzz,0,0,0.4
+No.,0,0,0.4
+Give them a ketchup packet from the lunch room,0,0,1
+Call upon your ancestors,0,0,1
+Can I have their sandwich?,0,0.1,0.4
+(╯‵□′)╯︵┻━┻,0,0.2,0.3
+Have a giant rubber chicken attack them,0,0.2,0.7
+Open a credit card in their name!,0,0.4,0.6
 Throw them in a volcano!,0,0.5,0.5
+Marry their spouse!,0,0.6,0.7
+Poisoned apples!,0,0.8,0.7
+Sue them back!,0,1,0
+Put them on a cruise! To the moon!,0,1,1
+Subject them to spicy foods,0,1,1
+Call them not a true Scottsman,0.1,0,0.4
+Steal their car tires!,0.1,0.1,0.6
+Give them a stick of gum,0.1,0.1,0.9
+Hire a clown to be the new CEO,0.1,0.5,0.5
+Have everyone work underwater?,0.1,0.7,0.4
+Counter-sue for wasting our time,0.1,0.8,0.1
+Pay off their lawyer!,0.1,0.9,0.2
+Tell them that their resignation was a joke,0.2,0,0.2
+Swap their N and M keys!,0.2,0,0.4
+Fire them!,0.2,0.1,0
+Change our name while they're suing,0.2,0.1,0.2
+Make them eat liver and onions!,0.2,0.1,0.6
+Offer one piece of candy,0.2,0.1,0.9
+Pretend to go bankrupt,0.2,0.6,0.3
+Order 66,0.2,0.7,0.5
+Hire a lawyer!,0.2,1,0.1
+Eat the Mona Lisa!,0.2,1,1
+Quit faster than them!,0.3,0,0.2
+Eat their sandwich!,0.3,0,0.2
+Let's all get matching tattoos!,0.3,0.1,0.6
+Become a ghost!,0.3,0.1,0.6
+Sign them up for a hippo ballet class!,0.3,0.2,0.7
+Give them a complimentary banana,0.3,0.2,0.8
+Toss them a can of baked beans,0.3,0.2,0.8
+Did you know? Knowing means you know!,0.3,0.3,1
+Film a movie about them!,0.3,0.8,0.7
+Invest into developing a line of edible office supplies,0.3,1,0.7
+Steal the moon!,0.3,1,1
+Slap a fish!,0.4,0,0.7
+Tell them they can only communicate through interpretive dance for the next year,0.4,0,1
+Turn into a warewolf!,0.4,0.2,0.7
+Make lawsuits illegal!,0.4,0.3,0.5
+Turn into a warehouse!,0.4,0.3,0.9
+Give them a cup of granola bars,0.4,0.4,0.4
+Send them to live with their least favorite celebrity!,0.4,0.5,0.7
+Open brain surgery,0.4,0.7,0.8
+Do nothing,0.5,0,0
+Sell them a magic eight ball t-shirt,0.5,0,0.5
+?sdrawkcab klat enoyreve evaH,0.5,0,0.7
 Dance off!,0.5,0,1
-Steal the moon!,0.25,1,1
-Give them a raise!,1,1,0
+Holodeck. End program,0.5,0,1
+EEEEEEHHHHHH MACARANA,0.5,0,1
+Remind them that lawsuits are illegal in outer space,0.5,0,1
+Paint the walls of the conference room bright pink,0.5,0.1,0.5
+Turn their resignation into a meme,0.5,0.1,0.6
+Organize a spelling bee ,0.5,0.1,0.6
+Rename the company 'The Flying Spaghetti Monster Inc.',0.5,0.1,0.9
+Replace them with a robot that sings karaoke,0.5,0.2,0.4
+Organize a surprise flash mob,0.5,0.2,0.6
+Taco!,0.5,0.2,1
+Become part of the furniture!,0.5,0.3,0.6
+Create a new department called 'The Nap Squad',0.5,0.3,0.8
+Company-sponsored hot air balloon ride,0.5,0.4,0.4
+Hire a team of professional chimpanzees,0.5,0.4,0.4
+Start selling unicorn themed products?,0.5,0.4,0.6
+We should hire a group of people dressed as giant robots,0.5,0.4,0.7
+Give them one free meal ticket,0.5,0.5,0.5
+Mystery boxes?,0.5,0.5,1
+Invert gravity!,0.5,0.5,1
+Squirrels in space!,0.5,0.6,0.7
+Call Janeaway!,0.5,0.9,0.7
+Give them an extra 10 minute break!,0.5,1,0
+Game of chess where the winner gets a million dollars,0.5,1,0.6
+Invest in a time machine?,0.5,1,0.8
+Buy Robux?,0.5,1,1
+I'll have two number nines. A number nine large. A number six with extra dip,0.5,1,1
+Ask if they would like to trade places with a unicorn for a day,0.6,0,0.7
+Clown costumes Fridays!,0.6,0.1,0.8
+Send them on a hot air balloon adventure,0.6,0.2,0.4
+Sign them up for Ghost hunting 101,0.6,0.2,0.7
+Give them chips and a water,0.6,0.3,0.3
+Set up a maze made entirely of cheese,0.6,0.3,0.4
+Hire their shoes!,0.6,0.3,0.6
+Install a mechanical bull in the hallway,0.6,0.3,0.7
+Take a vacation!,0.6,0.4,0.2
+Buy a giant bouncy castle,0.6,0.4,0.8
+Earn a math degree!,0.6,0.7,0.9
+Buy us dinner?,0.6,0.8,0.2
+Tell them they have won a trip to Mars,0.6,1,0.9
+Do a kickflip!,0.7,0,0.9
+Give them a cheese,0.7,0.2,0.4
+Offer them a job as our lawyer in disguise!,0.7,0.3,0.6
+Daily lunches made of pizza,0.7,0.4,0.2
+Alien abduction insurance?,0.7,0.4,0.6
+Make our products in the shape of clouds!,0.7,0.5,0.8
+Bring back the flip phone,0.7,0.5,1
+Achieve absolute zero!,0.7,0.9,1
+Sell the company,0.7,1,0.1
+Throw a LAN party!,0.8,0.1,0.3
+Give them new refurbished windshield wipers,0.8,0.7,0.6
+Give them a free rug!,0.8,0.9,0.6
+Offer yoga classes during work hours,0.9,0.3,0
+Offer free unicorn rides,0.9,0.8,0.6
+Give everyone a pet llama,0.9,1,0.9
+Make them laugh!,1,0,0
+Give them a high five!,1,0,0
+Say sorry and give them an appreciation note,1,0,0
+Date them!,1,0.1,0.3
+Give a 1000$ in CompanyBux,1,0.1,0.5
+Hire a team of professional cuddlers,1,0.3,0.2
+Get druuuuuunk,1,0.3,0.4
 Pizza party?,1,0.5,0
+Buy them flowers!,1,0.6,0.2
+Send them on a blind date!,1,0.9,0.8
+Give them a raise!,1,1,0
+Offer them a lifetime supply of free ice cream,1,1,0
+Give them a gamer chair,1,1,0.2
+Eat the rich!,1,1,0.5
+Give them a annual 1$ bonus,1,1,1
+Give them a new 1990s car,1,1,1

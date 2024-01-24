@@ -53,8 +53,10 @@ public class IdeaManager {
 		file.GetLine();
 		while (!file.EofReached()) {
 			string line = file.GetLine();
-			string[] values = line.Split(',');
-			ideas.Add(new Idea(values[0], (byte) (float.Parse(values[1]) * 255), (byte) (float.Parse(values[2]) * 255), (byte) (float.Parse(values[3]) * 255)));
+			if (line != string.Empty) {
+				string[] values = line.Split(',');
+				ideas.Add(new Idea(values[0], (byte) (float.Parse(values[1]) * 255), (byte) (float.Parse(values[2]) * 255), (byte) (float.Parse(values[3]) * 255)));
+			}
 		}
 		file.Close();
 	}
