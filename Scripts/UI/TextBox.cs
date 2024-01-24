@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using static System.Net.Mime.MediaTypeNames;
 
 public partial class TextBox : Label {
 
@@ -63,6 +64,15 @@ public partial class TextBox : Label {
 		SetText(ideas.GetIdea(ideas.GetIdeaIndex(choice)).Text);
 	}
 
+	public override void _Ready() {
+		base._Ready();
+
+		if (spliceData != null && spliceData.Length > 0) {
+			foreach (TextSplices splice in spliceData) {
+				splice.Initialize();
+			}
+		}
+	}
 	public override void _Process(double delta) {
 		base._Process(delta);
 

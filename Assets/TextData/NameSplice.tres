@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_vs30o")
 Key = "PERSON"
-Values = PackedStringArray("Mateo", "Daniel", "Juan", "Carlos", "Miguel", "Noah", "Liam", "Inuk", "Aiden", "Santiago", "Thiago", "James", "John", "Robert", "Michael", "William", "David", "Richard", "Charles", "Joseph", "Thomas", "Jimmy", "Rui", "Ronald", "Captian Snuffles", "Left Shark", "Quitter McQuitter", "Sir Lancelot", "Harper", "Susan", "Sandra", "Sandy", "Sam", "Sydie", "Sid", "Shirley", "Sharon", "Samantha", "Rein", "Macaela", "Makhayla", "Michala", "Mikailah", "Kaelly", "Keilei", "Kaliegh", "Zachary", "Zach", "Zake", "Stephen", "Steve", "Vanessa", "the Cha Cha Slide", "Larry", "Mason", "Caaaaaaaarl", "Nobody", "Garalt", "the downstairs cat", "Willie", "Marco", "Lilly", "Misty", "Quincy, son of Quincy,")
+pathToText = "res://Assets/TextData/NamesCSV.txt"
