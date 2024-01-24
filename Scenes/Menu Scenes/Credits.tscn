@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://g71tv0whui0p"]
+[gd_scene load_steps=7 format=3 uid="uid://g71tv0whui0p"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_2ltkk"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_1shov"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="3_j8pqs"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="4_gc276"]
+[ext_resource type="Texture2D" uid="uid://py20xsh5ntjl" path="res://Assets/Backgrounds/Credits.png" id="4_pmh3g"]
 [ext_resource type="AudioStream" uid="uid://bjy6kyb1x2re0" path="res://Assets/Sounds/Music/InterruptedSlow.wav" id="5_4g4qn"]
 
 [node name="Credits" type="Control"]
@@ -34,100 +35,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = 40.0
+offset_right = -11.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="PanelContainer" type="HBoxContainer" parent="MarginContainer"]
-custom_minimum_size = Vector2(0, 256)
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer" type="CenterContainer" parent="MarginContainer/PanelContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Panel/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 36
-text = "Jimmy
-  Designer
-  2D Art
-  Characters"
-
-[node name="Panel2" type="Panel" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer2" type="CenterContainer" parent="MarginContainer/PanelContainer/Panel2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Panel2/MarginContainer2"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 36
-text = "Joseph
-  Programmer
-  UI"
-
-[node name="Panel3" type="Panel" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer3" type="CenterContainer" parent="MarginContainer/PanelContainer/Panel3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Panel3/MarginContainer3"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 36
-text = "Rui
-  Programmer"
-
-[node name="Options Container" type="GridContainer" parent="MarginContainer"]
-custom_minimum_size = Vector2(368, 128)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-columns = 2
-
-[node name="Play" type="Button" parent="MarginContainer/Options Container"]
-custom_minimum_size = Vector2(512, 0)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Play"
-icon = ExtResource("2_1shov")
-icon_alignment = 2
-expand_icon = true
-
-[node name="Quit" type="Button" parent="MarginContainer/Options Container"]
-custom_minimum_size = Vector2(512, 0)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Quit"
-icon = ExtResource("3_j8pqs")
-expand_icon = true
 
 [node name="SceneManager" type="Node" parent="MarginContainer"]
 script = ExtResource("4_gc276")
@@ -137,5 +53,113 @@ stream = ExtResource("5_4g4qn")
 volume_db = -20.0
 autoplay = true
 
-[connection signal="pressed" from="MarginContainer/Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
-[connection signal="pressed" from="MarginContainer/Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, -2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_pmh3g")
+centered = false
+region_rect = Rect2(0, 0, 910, 512)
+
+[node name="PanelContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+offset_left = 160.0
+offset_top = 166.0
+offset_right = 1312.0
+offset_bottom = 458.0
+scale = Vector2(0.719406, 0.719406)
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="CenterContainer" parent="PanelContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "Jimmy
+  Designer
+  2D Art
+  Characters"
+
+[node name="Panel2" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="CenterContainer" parent="PanelContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Panel2/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "Joseph
+  Programmer
+  UI"
+
+[node name="Panel3" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer3" type="CenterContainer" parent="PanelContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Panel3/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "Rui
+  Programmer"
+
+[node name="Options Container" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(368, 128)
+layout_mode = 2
+offset_left = 178.0
+offset_top = 408.0
+offset_right = 1206.0
+offset_bottom = 628.0
+scale = Vector2(0.781977, 0.781977)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+columns = 2
+
+[node name="Play" type="Button" parent="Options Container"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+icon = ExtResource("2_1shov")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Quit" type="Button" parent="Options Container"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+icon = ExtResource("3_j8pqs")
+expand_icon = true
+
+[connection signal="pressed" from="Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
+[connection signal="pressed" from="Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]
