@@ -8,6 +8,7 @@ public partial class TextBox : Label {
 	[Export] private CutsceneManager cutscene;
 	[Export] private AudioStreamPlayer audio;
 	[Export] private float speed = 1;
+	[Export] private bool clearOnComplete = false;
 	[Export] private TextSplices[] spliceData;
 
 	private string targetText = string.Empty;
@@ -97,7 +98,7 @@ public partial class TextBox : Label {
 					if (textQueue.Count > 0) {
 						SetText(textQueue.Dequeue());
 					} else {
-						SetText(string.Empty);
+						if (clearOnComplete) SetText(string.Empty);
 						cutscene?.MoveToNextScene();
 					}
 				}

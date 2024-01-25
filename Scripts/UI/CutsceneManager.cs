@@ -8,8 +8,8 @@ public partial class CutsceneManager : AnimationPlayer {
 	private int currentScene = 0;
 
 	public override void _Ready() {
-
 		PlayScene(sceneList[currentScene]);
+		
 
 		base._Ready();
 	}
@@ -22,7 +22,7 @@ public partial class CutsceneManager : AnimationPlayer {
 	}
 
 	public void PlayScene(string scene) {
-		this.Stop();
+		this.Stop(true);
 		this.Play(scene);
 	}
 
