@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://g1vy2dmmbv5l"]
+[gd_scene load_steps=11 format=3 uid="uid://g1vy2dmmbv5l"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_00kjq"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_np2n0"]
@@ -6,6 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="3_ly5uo"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="4_o5fu5"]
 [ext_resource type="Texture2D" uid="uid://bd5bmd56xdrs7" path="res://Assets/Backgrounds/TV.png" id="4_phig2"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIConstantEffect.cs" id="5_6dk24"]
+[ext_resource type="Resource" uid="uid://c3mqm4qua4drb" path="res://Assets/UI/Animations/TitleAnimation.tres" id="6_kty1r"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="6_s1mng"]
+[ext_resource type="Resource" uid="uid://nw0jes4w6n8q" path="res://Assets/UI/Animations/MenuButtonAnimation.tres" id="7_ikdfu"]
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -62,9 +66,12 @@ offset_right = -3.0
 offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(256, 64)
 text = "How to Play"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("5_6dk24")
+effect = ExtResource("6_kty1r")
 
 [node name="PanelContainer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 256)
@@ -93,9 +100,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Options Container" type="GridContainer" parent="."]
+[node name="Options Container" type="Control" parent="."]
 custom_minimum_size = Vector2(368, 128)
 layout_mode = 2
+anchors_preset = 0
 offset_left = 175.0
 offset_top = 365.0
 offset_right = 1203.0
@@ -103,24 +111,36 @@ offset_bottom = 585.0
 scale = Vector2(0.803299, 0.803299)
 size_flags_horizontal = 4
 size_flags_vertical = 8
-columns = 2
 
 [node name="Play" type="Button" parent="Options Container"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+offset_right = 512.0
+offset_bottom = 220.0
+pivot_offset = Vector2(256, 110)
 size_flags_vertical = 3
 text = "Play"
 icon = ExtResource("2_np2n0")
 icon_alignment = 2
 expand_icon = true
+script = ExtResource("6_s1mng")
+effect = ExtResource("7_ikdfu")
+resetOnMouseExit = true
 
 [node name="Quit" type="Button" parent="Options Container"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+offset_left = 516.0
+offset_right = 1028.0
+offset_bottom = 220.0
+pivot_offset = Vector2(256, 110)
 size_flags_vertical = 3
 text = "Quit"
 icon = ExtResource("3_5gnf4")
 expand_icon = true
+script = ExtResource("6_s1mng")
+effect = ExtResource("7_ikdfu")
+resetOnMouseExit = true
 
 [connection signal="pressed" from="Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
 [connection signal="pressed" from="Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]

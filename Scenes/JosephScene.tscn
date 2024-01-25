@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=26 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="AudioStream" uid="uid://ccsyjvhapcggi" path="res://Assets/Sounds/Reactions/Ay Dios Mios Edit.wav" id="1_ooy4j"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="7_yf2vn"]
 [ext_resource type="Resource" uid="uid://b4ks4uca7638v" path="res://Assets/TextData/ReactionSplice.tres" id="10_osbqw"]
 [ext_resource type="AudioStream" uid="uid://nv6kyarmo6wv" path="res://Assets/Sounds/SFX/KeyStroke.wav" id="12_s50x1"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="12_wkc8w"]
+[ext_resource type="Resource" uid="uid://ie0ntjl77mia" path="res://Assets/UI/Animations/IdeaButtonAnimation.tres" id="13_dlo0v"]
 [ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="14_l6qcd"]
 
 [sub_resource type="Animation" id="Animation_pro8y"]
@@ -69,7 +71,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -81,7 +83,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -93,7 +95,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -300,7 +302,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/3/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -312,7 +314,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -324,7 +326,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -489,7 +491,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/3/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -501,7 +503,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -513,7 +515,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -693,7 +695,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -705,7 +707,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -717,7 +719,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -885,7 +887,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/4/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -897,7 +899,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/5/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -909,7 +911,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1112,7 +1114,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1124,7 +1126,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1136,7 +1138,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1148,7 +1150,7 @@ tracks/8/keys = {
 tracks/9/type = "method"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1159,7 +1161,7 @@ tracks/9/keys = {
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -1170,7 +1172,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1295,7 +1297,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1307,7 +1309,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1319,7 +1321,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1331,7 +1333,7 @@ tracks/8/keys = {
 tracks/9/type = "method"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1342,7 +1344,7 @@ tracks/9/keys = {
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -1353,7 +1355,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1483,7 +1485,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-500, 0)]
+"values": [Vector2(0, 0), Vector2(-600, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1517,7 +1519,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1:visible")
+tracks/6/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1529,7 +1531,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2:visible")
+tracks/7/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -1541,7 +1543,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3:visible")
+tracks/8/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1553,7 +1555,7 @@ tracks/8/keys = {
 tracks/9/type = "method"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 1")
+tracks/9/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1567,7 +1569,7 @@ tracks/9/keys = {
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 2")
+tracks/10/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -1581,7 +1583,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea 3")
+tracks/11/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -1669,7 +1671,6 @@ editor_draw_limits = true
 
 [node name="Boss Group" type="Node2D" parent="Cutscene"]
 visible = false
-position = Vector2(-1000, 0)
 
 [node name="Boss" type="Sprite2D" parent="Cutscene/Boss Group"]
 position = Vector2(97, 392)
@@ -1678,6 +1679,7 @@ texture = ExtResource("3_uemyf")
 region_rect = Rect2(911, 0, 256, 512)
 
 [node name="Board Group" type="Node2D" parent="Cutscene"]
+position = Vector2(-600, 0)
 
 [node name="Board Person 1" type="AnimatedSprite2D" parent="Cutscene/Board Group"]
 position = Vector2(149, 410)
@@ -1711,7 +1713,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
-visible = false
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 1
 anchors_preset = 10
@@ -1738,6 +1739,7 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
+autowrap_mode = 3
 script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
@@ -1746,6 +1748,7 @@ clearOnComplete = true
 spliceData = Array[Resource]([ExtResource("4_a6gw5"), ExtResource("5_oxmn8")])
 
 [node name="CharacterTextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
+visible = false
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 1
 anchors_preset = 8
@@ -1898,25 +1901,37 @@ offset_bottom = -60.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Idea 1" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
-custom_minimum_size = Vector2(80, 80)
+[node name="Idea1 Animator" type="Container" parent="Cutscene/CanvasLayer/Control/Ideas"]
+custom_minimum_size = Vector2(768, 178)
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 6
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
+anchor_bottom = 0.5
 offset_left = -511.0
-offset_top = -41.0
-offset_bottom = 126.0
+offset_top = -240.0
+offset_bottom = -62.0
 grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(384, 89)
+script = ExtResource("12_wkc8w")
+effect = ExtResource("13_dlo0v")
+resetOnMouseExit = true
+manualConnect = true
+
+[node name="Idea 1" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator" node_paths=PackedStringArray("cutscene")]
+visible = false
+custom_minimum_size = Vector2(768, 178)
+layout_mode = 2
 theme = ExtResource("3_4kbe3")
 text = "Idea 1"
+clip_text = true
 script = ExtResource("4_gapkk")
-cutscene = NodePath("../../../../AnimationPlayer")
+cutscene = NodePath("../../../../../AnimationPlayer")
 
-[node name="Idea 2" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
-custom_minimum_size = Vector2(80, 80)
+[node name="Idea2 Animator" type="Container" parent="Cutscene/CanvasLayer/Control/Ideas"]
+custom_minimum_size = Vector2(768, 178)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1928,14 +1943,25 @@ offset_top = -67.5
 offset_bottom = 67.5
 grow_horizontal = 0
 grow_vertical = 2
+pivot_offset = Vector2(384, 89)
+theme = ExtResource("3_4kbe3")
+script = ExtResource("12_wkc8w")
+effect = ExtResource("13_dlo0v")
+resetOnMouseExit = true
+manualConnect = true
+
+[node name="Idea 2" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator" node_paths=PackedStringArray("cutscene")]
+visible = false
+custom_minimum_size = Vector2(768, 178)
+layout_mode = 2
 theme = ExtResource("3_4kbe3")
 text = "Idea 2"
+clip_text = true
 script = ExtResource("4_gapkk")
-cutscene = NodePath("../../../../AnimationPlayer")
+cutscene = NodePath("../../../../../AnimationPlayer")
 
-[node name="Idea 3" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas" node_paths=PackedStringArray("cutscene")]
-visible = false
-custom_minimum_size = Vector2(80, 80)
+[node name="Idea3 Animator" type="Container" parent="Cutscene/CanvasLayer/Control/Ideas"]
+custom_minimum_size = Vector2(768, 178)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -1947,10 +1973,22 @@ offset_top = -128.0
 offset_bottom = 39.0
 grow_horizontal = 0
 grow_vertical = 0
+pivot_offset = Vector2(384, 89)
+theme = ExtResource("3_4kbe3")
+script = ExtResource("12_wkc8w")
+effect = ExtResource("13_dlo0v")
+resetOnMouseExit = true
+manualConnect = true
+
+[node name="Idea 3" type="Button" parent="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator" node_paths=PackedStringArray("cutscene")]
+visible = false
+custom_minimum_size = Vector2(768, 178)
+layout_mode = 2
 theme = ExtResource("3_4kbe3")
 text = "Idea 3"
+clip_text = true
 script = ExtResource("4_gapkk")
-cutscene = NodePath("../../../../AnimationPlayer")
+cutscene = NodePath("../../../../../AnimationPlayer")
 
 [node name="KeySFX" type="AudioStreamPlayer" parent="Cutscene/CanvasLayer/Control"]
 stream = ExtResource("12_s50x1")
@@ -1964,6 +2002,12 @@ stream = ExtResource("14_l6qcd")
 volume_db = -20.0
 autoplay = true
 
-[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea 1" method="OnPress"]
-[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea 2" method="OnPress"]
-[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea 3" to="Cutscene/CanvasLayer/Control/Ideas/Idea 3" method="OnPress"]
+[connection signal="mouse_entered" from="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator" method="OnMouseEnter"]
+[connection signal="mouse_exited" from="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator" method="OnMouseExit"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" method="OnPress"]
+[connection signal="mouse_entered" from="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator" method="OnMouseEnter"]
+[connection signal="mouse_exited" from="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator" method="OnMouseExit"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2" to="Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2" method="OnPress"]
+[connection signal="mouse_entered" from="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3" to="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator" method="OnMouseEnter"]
+[connection signal="mouse_exited" from="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3" to="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator" method="OnMouseExit"]
+[connection signal="pressed" from="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3" to="Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3" method="OnPress"]

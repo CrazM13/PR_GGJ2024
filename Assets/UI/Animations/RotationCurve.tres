@@ -1,0 +1,7 @@
+[gd_resource type="Curve" format=3 uid="uid://besndgtfmibar"]
+
+[resource]
+min_value = -5.0
+max_value = 5.0
+_data = [Vector2(0, 0.0522389), 0.0, 0.0, 0, 0, Vector2(0.248996, -5), 0.0, 0.0, 0, 0, Vector2(0.502008, 5), 0.0, 0.0, 0, 0, Vector2(0.746988, -5), 0.0, 0.0, 0, 0, Vector2(1, 0.00373173), 0.0, 0.0, 0, 0]
+point_count = 5

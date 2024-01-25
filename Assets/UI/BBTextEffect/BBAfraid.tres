@@ -1,0 +1,7 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=3 uid="uid://b4pxbivfvbn72"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Effects/BBAfraid.cs" id="1_xacco"]
+
+[resource]
+script = ExtResource("1_xacco")
+fear = 1.0

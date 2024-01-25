@@ -1,0 +1,7 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=3 uid="uid://curjeirmy1qus"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Effects/BBSinging.cs" id="1_lfunk"]
+
+[resource]
+script = ExtResource("1_lfunk")
+volume = 1.0

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ie0ntjl77mia"]
+
+[ext_resource type="Curve" uid="uid://diyjxbol12wds" path="res://Assets/UI/Animations/GrowthCurve.tres" id="1_pcq7x"]
+[ext_resource type="Curve" uid="uid://besndgtfmibar" path="res://Assets/UI/Animations/RotationCurve.tres" id="2_abq4u"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIEffect.cs" id="3_mrlbn"]
+
+[resource]
+script = ExtResource("3_mrlbn")
+speed = 1.0
+strength = 0.2
+growAnimation = true
+growthSpeed = 1.0
+squashMode = true
+squashOffset = 0.5
+growthCurve = ExtResource("1_pcq7x")
+rotateAnimation = true
+rotateSpeed = 0.3
+rotateCurve = ExtResource("2_abq4u")

@@ -1,12 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://eao0wesfmqf6"]
+[gd_scene load_steps=13 format=3 uid="uid://eao0wesfmqf6"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIConstantEffect.cs" id="2_bloy3"]
 [ext_resource type="Texture2D" uid="uid://3c4dh6pabouk" path="res://Assets/UI/Sprites/IconInstructions.png" id="3_e1yuf"]
 [ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="3_t81w6"]
+[ext_resource type="Resource" uid="uid://c3mqm4qua4drb" path="res://Assets/UI/Animations/TitleAnimation.tres" id="3_vh41y"]
 [ext_resource type="Texture2D" uid="uid://dy3hhthid44v1" path="res://Assets/UI/Sprites/IconCredits.png" id="4_jon60"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="5_vbjku"]
+[ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="6_qd6yo"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
+[ext_resource type="Resource" uid="uid://nw0jes4w6n8q" path="res://Assets/UI/Animations/MenuButtonAnimation.tres" id="7_pkfdv"]
 [ext_resource type="Texture2D" uid="uid://cswa2jmpbtuou" path="res://Assets/Backgrounds/Main_Menu_2.png" id="8_r7mdi"]
 
 [node name="MainMenu" type="Control"]
@@ -18,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_n6i77")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,28 +31,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Title Container" type="Control" parent="MarginContainer"]
-custom_minimum_size = Vector2(512, 128)
-layout_mode = 2
+custom_minimum_size = Vector2(396, 64)
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 131.0
+offset_right = 403.0
+offset_bottom = 195.0
+rotation = -0.277792
+pivot_offset = Vector2(201, 32)
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="MarginContainer/Title Container"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Title Container"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.625
-anchor_right = 0.152
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 160.0
-offset_right = 144.176
-offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.277792
-scale = Vector2(0.688336, 0.688336)
+pivot_offset = Vector2(198, 32)
+script = ExtResource("2_bloy3")
+effect = ExtResource("3_vh41y")
+
+[node name="Title" type="Label" parent="MarginContainer/Title Container/CenterContainer"]
+layout_mode = 2
 text = "Title of the Game"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="SceneManager" type="Node" parent="."]
 script = ExtResource("6_x34nf")
@@ -67,9 +74,10 @@ texture = ExtResource("8_r7mdi")
 centered = false
 region_rect = Rect2(0, 0, 910, 512)
 
-[node name="Options Container" type="GridContainer" parent="."]
+[node name="Options Container" type="Control" parent="."]
 custom_minimum_size = Vector2(368, 512)
 layout_mode = 2
+anchors_preset = 0
 offset_left = 105.0
 offset_top = 389.0
 offset_right = 1133.0
@@ -78,43 +86,98 @@ rotation = -0.356783
 scale = Vector2(0.348625, 0.348625)
 size_flags_horizontal = 4
 size_flags_vertical = 8
-columns = 2
 
-[node name="Play" type="Button" parent="Options Container"]
-custom_minimum_size = Vector2(512, 0)
+[node name="PlayContainer" type="Control" parent="Options Container"]
+anchors_preset = 0
+offset_right = 512.0
+offset_bottom = 254.0
+
+[node name="Play" type="Button" parent="Options Container/PlayContainer"]
+custom_minimum_size = Vector2(512, 254)
 layout_mode = 2
-size_flags_vertical = 3
+offset_right = 512.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(256, 127)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "Play"
 icon = ExtResource("2_6q21s")
 icon_alignment = 2
 expand_icon = true
+script = ExtResource("6_qd6yo")
+effect = ExtResource("7_pkfdv")
+resetOnMouseExit = true
 
-[node name="Instructions" type="Button" parent="Options Container"]
+[node name="InstructionsContainer" type="Control" parent="Options Container"]
+custom_minimum_size = Vector2(512, 254)
+anchors_preset = 0
+offset_left = 516.0
+offset_top = -0.00012207
+offset_right = 1028.0
+offset_bottom = 254.0
+
+[node name="Instructions" type="Button" parent="Options Container/InstructionsContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+offset_right = 512.0
+offset_bottom = 254.0
+pivot_offset = Vector2(256, 127)
 size_flags_vertical = 3
 text = "Instructions"
 icon = ExtResource("3_e1yuf")
 expand_icon = true
+script = ExtResource("6_qd6yo")
+effect = ExtResource("7_pkfdv")
+resetOnMouseExit = true
 
-[node name="Credits" type="Button" parent="Options Container"]
+[node name="CreditsContainer" type="Control" parent="Options Container"]
+custom_minimum_size = Vector2(512, 254)
+anchors_preset = 0
+offset_left = 3.05176e-05
+offset_top = 258.0
+offset_right = 512.0
+offset_bottom = 512.0
+
+[node name="Credits" type="Button" parent="Options Container/CreditsContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+offset_right = 512.0
+offset_bottom = 254.0
+pivot_offset = Vector2(256, 127)
 size_flags_vertical = 3
 text = "Credits"
 icon = ExtResource("4_jon60")
 icon_alignment = 2
 expand_icon = true
+script = ExtResource("6_qd6yo")
+effect = ExtResource("7_pkfdv")
+resetOnMouseExit = true
 
-[node name="Quit" type="Button" parent="Options Container"]
+[node name="QuitContainer" type="Control" parent="Options Container"]
+custom_minimum_size = Vector2(512, 254)
+anchors_preset = 0
+offset_left = 516.0
+offset_top = 258.0
+offset_right = 1028.0
+offset_bottom = 512.0
+
+[node name="Quit" type="Button" parent="Options Container/QuitContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+offset_right = 512.0
+offset_bottom = 254.0
+pivot_offset = Vector2(256, 127)
 size_flags_vertical = 3
 text = "Quit"
 icon = ExtResource("5_vbjku")
 expand_icon = true
+script = ExtResource("6_qd6yo")
+effect = ExtResource("7_pkfdv")
+resetOnMouseExit = true
 
-[connection signal="pressed" from="Options Container/Play" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
-[connection signal="pressed" from="Options Container/Instructions" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Instructions.tscn"]]
-[connection signal="pressed" from="Options Container/Credits" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Credits.tscn"]]
-[connection signal="pressed" from="Options Container/Quit" to="SceneManager" method="Quit"]
+[connection signal="pressed" from="Options Container/PlayContainer/Play" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
+[connection signal="pressed" from="Options Container/InstructionsContainer/Instructions" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Instructions.tscn"]]
+[connection signal="pressed" from="Options Container/CreditsContainer/Credits" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Credits.tscn"]]
+[connection signal="pressed" from="Options Container/QuitContainer/Quit" to="SceneManager" method="Quit"]
