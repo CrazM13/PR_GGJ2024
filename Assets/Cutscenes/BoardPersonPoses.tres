@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b1xe8ytqmyf7w" path="res://Assets/Characters/Board Member 3/Suggestion.png" id="11_6x0ci"]
 [ext_resource type="Texture2D" uid="uid://b08sdycww5wl0" path="res://Assets/Characters/Board Member 3/Victory.png" id="12_sgwox"]
 [ext_resource type="Texture2D" uid="uid://b0a5n42fqlfno" path="res://Assets/Characters/Boss/Idle.png" id="13_mspnf"]
-[ext_resource type="Texture2D" uid="uid://c47ltjqux5h1r" path="res://Assets/Characters/Boss/Reaction.png" id="14_ygd1o"]
+[ext_resource type="Texture2D" uid="uid://cqd0kd3qcd2xu" path="res://Assets/Characters/Boss/Reaction_3.png" id="14_cyfbs"]
 [ext_resource type="Texture2D" uid="uid://cdv2l2v0g8y7" path="res://Assets/Characters/Boss/Suggestion.png" id="15_63lms"]
 [ext_resource type="Texture2D" uid="uid://rr58rrlrg5gx" path="res://Assets/Characters/Boss/Victory.png" id="16_bwn6w"]
 
@@ -125,7 +125,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_ygd1o")
+"texture": ExtResource("14_cyfbs")
 }],
 "loop": true,
 "name": &"Boss Panic",
