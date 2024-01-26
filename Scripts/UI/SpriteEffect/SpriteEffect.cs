@@ -1,10 +1,9 @@
 using Godot;
 using System;
-using System.ComponentModel.DataAnnotations;
 
-public partial class UIEffect : BaseEffect<Control> {
+public partial class SpriteEffect : BaseEffect<Sprite2D> {
 
-	public override void PlayEffect(Control target, float animationTime) {
+	public override void PlayEffect(Sprite2D target, float animationTime) {
 
 		if (growAnimation) {
 			target.Scale = PlayGrowth(animationTime);
@@ -16,7 +15,7 @@ public partial class UIEffect : BaseEffect<Control> {
 
 	}
 
-	public override void ResetEffect(Control target) {
+	public override void ResetEffect(Sprite2D target) {
 
 		if (growAnimation) target.Scale = Vector2.One;
 		if (rotateAnimation) target.RotationDegrees = 0;

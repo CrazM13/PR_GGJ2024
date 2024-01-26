@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://eao0wesfmqf6"]
+[gd_scene load_steps=22 format=3 uid="uid://eao0wesfmqf6"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
@@ -13,9 +13,14 @@
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
 [ext_resource type="Texture2D" uid="uid://dsgx0gps1n5o7" path="res://Assets/UI/Main Menu/Boss/Boss_Angry_Symbol.png" id="7_mna0l"]
 [ext_resource type="Resource" uid="uid://nw0jes4w6n8q" path="res://Assets/UI/Animations/MenuButtonAnimation.tres" id="7_pkfdv"]
+[ext_resource type="Script" path="res://Scripts/UI/SpriteEffect/SpriteConstantEffect.cs" id="8_a0h17"]
 [ext_resource type="Texture2D" uid="uid://bikqak1q183bs" path="res://Assets/UI/Main Menu/Boss/Boss_Arm_Left.png" id="8_u14mr"]
 [ext_resource type="Texture2D" uid="uid://be744fmc87grx" path="res://Assets/UI/Main Menu/Boss/Boss_Arm_Right.png" id="9_jam4d"]
+[ext_resource type="Resource" uid="uid://c6gty30iura4y" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetArmLeft.tres" id="9_uqvkn"]
 [ext_resource type="Texture2D" uid="uid://kroelbslcjwa" path="res://Assets/UI/Main Menu/Boss/Head copy.png" id="10_nk6p8"]
+[ext_resource type="Resource" uid="uid://bk2y35ciwn25x" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetArmRight.tres" id="11_708y4"]
+[ext_resource type="Resource" uid="uid://cl4x0ny47j2un" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetHead.tres" id="12_ywuha"]
+[ext_resource type="Resource" uid="uid://b6llrrodqn7bh" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetAnger.tres" id="15_xgpuv"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -78,26 +83,37 @@ texture = ExtResource("6_de8nr")
 centered = false
 region_rect = Rect2(0, 0, 910, 512)
 
-[node name="BossAngrySymbol" type="Sprite2D" parent="Background"]
-z_index = 1
-position = Vector2(1510, 240)
-texture = ExtResource("7_mna0l")
-
 [node name="BossArmLeft" type="Sprite2D" parent="Background"]
 z_index = 1
 position = Vector2(1653.33, 701.667)
 texture = ExtResource("8_u14mr")
 offset = Vector2(58.3334, -258.333)
+script = ExtResource("8_a0h17")
+timeOffset = 0.0
+effect = ExtResource("9_uqvkn")
 
 [node name="BossArmRight" type="Sprite2D" parent="Background"]
 position = Vector2(1368.33, 663.333)
 texture = ExtResource("9_jam4d")
 offset = Vector2(-28.3331, -265)
+script = ExtResource("8_a0h17")
+timeOffset = 0.7
+effect = ExtResource("11_708y4")
 
 [node name="HeadCopy" type="Sprite2D" parent="Background"]
 position = Vector2(1515, 551.667)
 texture = ExtResource("10_nk6p8")
 offset = Vector2(43.3334, -158.333)
+script = ExtResource("8_a0h17")
+timeOffset = 0.0
+effect = ExtResource("12_ywuha")
+
+[node name="BossAngrySymbol" type="Sprite2D" parent="Background/HeadCopy"]
+z_index = 1
+position = Vector2(-5, -311.667)
+texture = ExtResource("7_mna0l")
+script = ExtResource("8_a0h17")
+effect = ExtResource("15_xgpuv")
 
 [node name="Options Container" type="Control" parent="."]
 custom_minimum_size = Vector2(368, 512)
