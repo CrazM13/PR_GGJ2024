@@ -1,15 +1,27 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cq1qikmn34f0f"]
+[gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://cq1qikmn34f0f"]
 
-[ext_resource type="Texture2D" uid="uid://cmyu2cb4c11ov" path="res://Assets/Characters/Board_Person_1.png" id="1_epsuw"]
-[ext_resource type="Texture2D" uid="uid://ydfctgu3pbye" path="res://Assets/Characters/Boss.png" id="2_4cksn"]
-[ext_resource type="Texture2D" uid="uid://dkm2qoqdulequ" path="res://Assets/Characters/Board_Person_2.png" id="2_5h1qm"]
-[ext_resource type="Texture2D" uid="uid://ty74fhl6setd" path="res://Assets/Characters/Board_Person_3.png" id="3_1b5g0"]
+[ext_resource type="Texture2D" uid="uid://cukyqsunw1hod" path="res://Assets/Characters/Board Member 1/Idle.png" id="1_yvr8r"]
+[ext_resource type="Texture2D" uid="uid://d2tjghwrc321q" path="res://Assets/Characters/Board Member 1/Reaction.png" id="2_rebgq"]
+[ext_resource type="Texture2D" uid="uid://bovcdsufvxb6m" path="res://Assets/Characters/Board Member 1/Suggestion.png" id="3_p1vec"]
+[ext_resource type="Texture2D" uid="uid://xxa1w0xdo2k4" path="res://Assets/Characters/Board Member 1/Victory.png" id="4_evawg"]
+[ext_resource type="Texture2D" uid="uid://bko6fxnn30ltn" path="res://Assets/Characters/Board Member 2/Idle.png" id="5_h57qu"]
+[ext_resource type="Texture2D" uid="uid://c5pnl4rixjwhf" path="res://Assets/Characters/Board Member 2/Reaction.png" id="6_sanvm"]
+[ext_resource type="Texture2D" uid="uid://jwiqrfjnxbhm" path="res://Assets/Characters/Board Member 2/Suggestion.png" id="7_2cfhv"]
+[ext_resource type="Texture2D" uid="uid://qve37dwtc744" path="res://Assets/Characters/Board Member 2/Victory.png" id="8_pgapa"]
+[ext_resource type="Texture2D" uid="uid://doumqecqmmjkn" path="res://Assets/Characters/Board Member 3/Idle.png" id="9_k2dbx"]
+[ext_resource type="Texture2D" uid="uid://i4l0wq2llpgm" path="res://Assets/Characters/Board Member 3/Reaction.png" id="10_576fq"]
+[ext_resource type="Texture2D" uid="uid://b1xe8ytqmyf7w" path="res://Assets/Characters/Board Member 3/Suggestion.png" id="11_6x0ci"]
+[ext_resource type="Texture2D" uid="uid://b08sdycww5wl0" path="res://Assets/Characters/Board Member 3/Victory.png" id="12_sgwox"]
+[ext_resource type="Texture2D" uid="uid://b0a5n42fqlfno" path="res://Assets/Characters/Boss/Idle.png" id="13_mspnf"]
+[ext_resource type="Texture2D" uid="uid://c47ltjqux5h1r" path="res://Assets/Characters/Boss/Reaction.png" id="14_ygd1o"]
+[ext_resource type="Texture2D" uid="uid://cdv2l2v0g8y7" path="res://Assets/Characters/Boss/Suggestion.png" id="15_63lms"]
+[ext_resource type="Texture2D" uid="uid://rr58rrlrg5gx" path="res://Assets/Characters/Boss/Victory.png" id="16_bwn6w"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_epsuw")
+"texture": ExtResource("1_yvr8r")
 }],
 "loop": true,
 "name": &"BP1 Idle",
@@ -17,7 +29,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4cksn")
+"texture": ExtResource("2_rebgq")
 }],
 "loop": true,
 "name": &"BP1 Panic",
@@ -25,7 +37,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_5h1qm")
+"texture": ExtResource("3_p1vec")
+}],
+"loop": true,
+"name": &"BP1 Suggestion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_evawg")
+}],
+"loop": true,
+"name": &"BP1 Victory",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h57qu")
 }],
 "loop": true,
 "name": &"BP2 Idle",
@@ -33,7 +61,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4cksn")
+"texture": ExtResource("6_sanvm")
 }],
 "loop": true,
 "name": &"BP2 Panic",
@@ -41,7 +69,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_1b5g0")
+"texture": ExtResource("7_2cfhv")
+}],
+"loop": true,
+"name": &"BP2 Suggestion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_pgapa")
+}],
+"loop": true,
+"name": &"BP2 Victory",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_k2dbx")
 }],
 "loop": true,
 "name": &"BP3 Idle",
@@ -49,9 +93,57 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4cksn")
+"texture": ExtResource("10_576fq")
 }],
 "loop": true,
 "name": &"BP3 Panic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_6x0ci")
+}],
+"loop": true,
+"name": &"BP3 Suggestion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_sgwox")
+}],
+"loop": true,
+"name": &"BP3 Victory",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_mspnf")
+}],
+"loop": true,
+"name": &"Boss Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ygd1o")
+}],
+"loop": true,
+"name": &"Boss Panic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_63lms")
+}],
+"loop": true,
+"name": &"Boss Suggestion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_bwn6w")
+}],
+"loop": true,
+"name": &"Boss Victory",
 "speed": 5.0
 }]
