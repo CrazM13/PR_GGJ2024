@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxf17wple32xm"]
+
+[ext_resource type="Texture2D" uid="uid://dxjf7tet8ctn5" path="res://Assets/Catapult Assets/Pointer.png" id="1_jgog3"]
+
+[node name="Arrow" type="Sprite2D"]
+position = Vector2(50, 15)
+scale = Vector2(1.01333, 0.93)
+texture = ExtResource("1_jgog3")
+centered = false
+offset = Vector2(0, -50)
