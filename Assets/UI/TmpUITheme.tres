@@ -1,15 +1,16 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bvkg25ovmdgtf"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bvkg25ovmdgtf"]
 
-[ext_resource type="Texture2D" uid="uid://bcmbjnywh5b1q" path="res://Assets/TmpAssets/TMPSPRITES.png" id="1_h2vha"]
 [ext_resource type="Texture2D" uid="uid://2eonoorefy0j" path="res://Assets/UI/Sprites/ComicButton.png" id="2_3dady"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yryjx"]
-texture = ExtResource("1_h2vha")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 16.0
-region_rect = Rect2(256, 512, 256, 256)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anj1b"]
+texture = ExtResource("2_3dady")
+texture_margin_left = 66.0
+texture_margin_top = 59.0
+texture_margin_right = 94.0
+texture_margin_bottom = 85.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 1024, 1024)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asgsw"]
 
@@ -24,16 +25,6 @@ axis_stretch_vertical = 1
 region_rect = Rect2(0, 0, 1024, 1024)
 modulate_color = Color(0.815686, 0.815686, 0.815686, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anj1b"]
-texture = ExtResource("2_3dady")
-texture_margin_left = 66.0
-texture_margin_top = 59.0
-texture_margin_right = 94.0
-texture_margin_bottom = 85.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-region_rect = Rect2(0, 0, 1024, 1024)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3njk0"]
 texture = ExtResource("2_3dady")
 texture_margin_left = 66.0
@@ -46,17 +37,19 @@ region_rect = Rect2(0, 0, 1024, 1024)
 modulate_color = Color(0.447059, 0.447059, 0.447059, 1)
 
 [resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 12
 Button/font_sizes/font_size = 24
-Button/styles/disabled = SubResource("StyleBoxTexture_yryjx")
+Button/styles/disabled = SubResource("StyleBoxTexture_anj1b")
 Button/styles/focus = SubResource("StyleBoxEmpty_asgsw")
 Button/styles/hover = SubResource("StyleBoxTexture_8na2i")
 Button/styles/normal = SubResource("StyleBoxTexture_anj1b")
 Button/styles/pressed = SubResource("StyleBoxTexture_3njk0")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/constants/outline_size = 24
+Label/constants/outline_size = 18
 Label/font_sizes/font_size = 32
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
-RichTextLabel/constants/outline_size = 24
+RichTextLabel/constants/outline_size = 18
 RichTextLabel/font_sizes/normal_font_size = 32

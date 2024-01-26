@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=29 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="AudioStream" uid="uid://ccsyjvhapcggi" path="res://Assets/Sounds/Reactions/Ay Dios Mios Edit.wav" id="1_ooy4j"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/IdeaButton.cs" id="4_gapkk"]
 [ext_resource type="SpriteFrames" uid="uid://cq1qikmn34f0f" path="res://Assets/Cutscenes/BoardPersonPoses.tres" id="4_mktue"]
 [ext_resource type="Resource" uid="uid://chd1b40khvu6d" path="res://Assets/TextData/ThreatSplice.tres" id="5_oxmn8"]
+[ext_resource type="RichTextEffect" uid="uid://cerpvojmulnir" path="res://Assets/UI/BBTextEffect/BBType.tres" id="7_ibnf1"]
 [ext_resource type="Texture2D" uid="uid://ddkob7dhop3w2" path="res://Assets/UI/Text_Box_Clipart.png" id="7_yf2vn"]
 [ext_resource type="Resource" uid="uid://b4ks4uca7638v" path="res://Assets/TextData/ReactionSplice.tres" id="10_osbqw"]
 [ext_resource type="AudioStream" uid="uid://nv6kyarmo6wv" path="res://Assets/Sounds/SFX/KeyStroke.wav" id="12_s50x1"]
@@ -2079,6 +2080,42 @@ tracks/14/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1:disabled")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea2 Animator/Idea 2:disabled")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Cutscene/CanvasLayer/Control/Ideas/Idea3 Animator/Idea 3:disabled")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_1600o"]
 length = 0.001
@@ -2300,7 +2337,7 @@ centered = false
 region_rect = Rect2(0, 0, 910, 512)
 
 [node name="Camera2D" type="Camera2D" parent="Cutscene"]
-position = Vector2(455, 253)
+position = Vector2(459, 260)
 zoom = Vector2(1.265, 1.265)
 editor_draw_limits = true
 
@@ -2362,7 +2399,8 @@ patch_margin_top = 26
 patch_margin_right = 172
 patch_margin_bottom = 102
 
-[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/TextBox" node_paths=PackedStringArray("cutscene", "audio")]
+[node name="Text" type="RichTextLabel" parent="Cutscene/CanvasLayer/Control/TextBox" node_paths=PackedStringArray("cutscene", "audio")]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2374,7 +2412,8 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
-autowrap_mode = 3
+bbcode_enabled = true
+custom_effects = [ExtResource("7_ibnf1")]
 script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
@@ -2392,9 +2431,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -556.0
-offset_top = -292.0
+offset_top = -324.0
 offset_right = -100.0
-offset_bottom = -124.0
+offset_bottom = -113.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
@@ -2409,7 +2448,8 @@ patch_margin_bottom = 104
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox" node_paths=PackedStringArray("cutscene", "audio")]
+[node name="Text" type="RichTextLabel" parent="Cutscene/CanvasLayer/Control/CharacterTextBox" node_paths=PackedStringArray("cutscene", "audio")]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2421,13 +2461,15 @@ offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
-horizontal_alignment = 1
-autowrap_mode = 3
+bbcode_enabled = true
+scroll_active = false
+custom_effects = [ExtResource("7_ibnf1")]
 script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
+centerText = true
 
 [node name="CharacterTextBox2" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 visible = false
@@ -2439,9 +2481,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -188.0
-offset_top = -289.0
+offset_top = -324.0
 offset_right = 268.0
-offset_bottom = -121.0
+offset_bottom = -109.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
@@ -2456,7 +2498,8 @@ patch_margin_bottom = 104
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox2" node_paths=PackedStringArray("cutscene", "audio")]
+[node name="Text" type="RichTextLabel" parent="Cutscene/CanvasLayer/Control/CharacterTextBox2" node_paths=PackedStringArray("cutscene", "audio")]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2468,13 +2511,15 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
-horizontal_alignment = 1
-autowrap_mode = 3
+bbcode_enabled = true
+scroll_active = false
+custom_effects = [ExtResource("7_ibnf1")]
 script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
+centerText = true
 
 [node name="CharacterTextBox3" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 visible = false
@@ -2486,9 +2531,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 175.0
-offset_top = -289.0
+offset_top = -324.0
 offset_right = 631.0
-offset_bottom = -121.0
+offset_bottom = -109.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
@@ -2503,7 +2548,8 @@ patch_margin_bottom = 104
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Text" type="Label" parent="Cutscene/CanvasLayer/Control/CharacterTextBox3" node_paths=PackedStringArray("cutscene", "audio")]
+[node name="Text" type="RichTextLabel" parent="Cutscene/CanvasLayer/Control/CharacterTextBox3" node_paths=PackedStringArray("cutscene", "audio")]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2515,13 +2561,15 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4kbe3")
-horizontal_alignment = 1
-autowrap_mode = 3
+bbcode_enabled = true
+scroll_active = false
+custom_effects = [ExtResource("7_ibnf1")]
 script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
+centerText = true
 
 [node name="Ideas" type="Control" parent="Cutscene/CanvasLayer/Control"]
 custom_minimum_size = Vector2(256, 128)
@@ -2627,6 +2675,7 @@ cutscene = NodePath("../../../../../AnimationPlayer")
 
 [node name="KeySFX" type="AudioStreamPlayer" parent="Cutscene/CanvasLayer/Control"]
 stream = ExtResource("12_s50x1")
+volume_db = -5.0
 
 [node name="ReactionSFX" type="AudioStreamPlayer" parent="Cutscene"]
 volume_db = -10.0

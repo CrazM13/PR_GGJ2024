@@ -2,13 +2,14 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class TextBox : Label {
+public partial class TextBox : RichTextLabel {
 
 	[Export] private CutsceneManager cutscene;
 	[Export] private AudioStreamPlayer audio;
 	[Export] private float speed = 1;
 	[Export] private bool clearOnComplete = false;
 	[Export] private TextSplices[] spliceData;
+	[Export] private bool centerText = false;
 
 	private string targetText = string.Empty;
 	private float progress = 0;
@@ -17,6 +18,8 @@ public partial class TextBox : Label {
 
 	private bool wasInputDown = false;
 	private bool allowInput = false;
+
+	private bool isPlayingEffect = false;
 
 	private float currentSpeedModifier = 1;
 
@@ -28,6 +31,7 @@ public partial class TextBox : Label {
 		if (text != string.Empty) {
 			if (spliceData != null && spliceData.Length > 0) text = SpliceText(text);
 
+			this.Text = string.Empty;
 			targetText = text;
 			progress = 0;
 		} else {
@@ -81,9 +85,25 @@ public partial class TextBox : Label {
 			progress += (float) delta * speed * currentSpeedModifier;
 			int index = Mathf.FloorToInt(progress);
 
+
 			if (oldLength != index) {
 				audio?.Play(0);
-				this.Text = targetText[..index];
+				if (index < targetText.Length) {
+					ApplyText($"{targetText[..index]}[Type]{targetText[index]}[/Type]");
+				} else {
+					ApplyText(targetText);
+				}
+
+				isPlayingEffect = true;
+			} else if (isPlayingEffect) {
+
+				if (index < targetText.Length) {
+					ApplyText(targetText[..index]);
+				} else {
+					ApplyText(targetText);
+				}
+
+				isPlayingEffect = false;
 			}
 		}
 
@@ -92,7 +112,7 @@ public partial class TextBox : Label {
 
 			if (isInputDown && !wasInputDown) {
 				if (progress < targetText.Length) {
-					currentSpeedModifier = 2f;
+					currentSpeedModifier = 3f;
 				} else if (this.Text.Length > 0) {
 					if (textQueue.Count > 0) {
 						SetText(textQueue.Dequeue());
@@ -113,6 +133,12 @@ public partial class TextBox : Label {
 		}
 
 		return text;
+	}
+
+	private void ApplyText(string text) {
+		if (centerText) text = $"[center]{text}[/center]";
+
+		this.Text = text;
 	}
 
 }
