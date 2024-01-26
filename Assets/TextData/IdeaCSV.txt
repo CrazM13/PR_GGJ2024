@@ -43,15 +43,15 @@ Give them a complimentary banana,0.3,0.2,0.8
 Toss them a can of baked beans,0.3,0.2,0.8
 Did you know? Knowing means you know!,0.3,0.3,1
 Film a movie about them!,0.3,0.8,0.7
-Invest into developing a line of edible office supplies,0.3,1,0.7
+Invest into developing edible office supplies,0.3,1,0.7
 Steal the moon!,0.3,1,1
 Slap a fish!,0.4,0,0.7
-Tell them they can only communicate through interpretive dance for the next year,0.4,0,1
+Talk via interpretive dance for a year,0.4,0,1
 Turn into a warewolf!,0.4,0.2,0.7
 Make lawsuits illegal!,0.4,0.3,0.5
 Turn into a warehouse!,0.4,0.3,0.9
 Give them a cup of granola bars,0.4,0.4,0.4
-Send them to live with their least favorite celebrity!,0.4,0.5,0.7
+Live with their least favorite celebrity!,0.4,0.5,0.7
 Open brain surgery,0.4,0.7,0.8
 Do nothing,0.5,0,0
 Sell them a magic eight ball t-shirt,0.5,0,0.5
@@ -59,11 +59,11 @@ Sell them a magic eight ball t-shirt,0.5,0,0.5
 Dance off!,0.5,0,1
 Holodeck. End program,0.5,0,1
 EEEEEEHHHHHH MACARANA,0.5,0,1
-Remind them that lawsuits are illegal in outer space,0.5,0,1
-Paint the walls of the conference room bright pink,0.5,0.1,0.5
+Lawsuits are illegal in outer space,0.5,0,1
+Paint the walls of the conference room pink,0.5,0.1,0.5
 Turn their resignation into a meme,0.5,0.1,0.6
 Organize a spelling bee ,0.5,0.1,0.6
-Rename the company 'The Flying Spaghetti Monster Inc.',0.5,0.1,0.9
+Rename us 'Flying Spaghetti Monster Inc.',0.5,0.1,0.9
 Replace them with a robot that sings karaoke,0.5,0.2,0.4
 Organize a surprise flash mob,0.5,0.2,0.6
 Taco!,0.5,0.2,1
@@ -72,18 +72,18 @@ Create a new department called 'The Nap Squad',0.5,0.3,0.8
 Company-sponsored hot air balloon ride,0.5,0.4,0.4
 Hire a team of professional chimpanzees,0.5,0.4,0.4
 Start selling unicorn themed products?,0.5,0.4,0.6
-We should hire a group of people dressed as giant robots,0.5,0.4,0.7
+Hire a group of people dressed as giant robots,0.5,0.4,0.7
 Give them one free meal ticket,0.5,0.5,0.5
 Mystery boxes?,0.5,0.5,1
 Invert gravity!,0.5,0.5,1
 Squirrels in space!,0.5,0.6,0.7
 Call Janeaway!,0.5,0.9,0.7
 Give them an extra 10 minute break!,0.5,1,0
-Game of chess where the winner gets a million dollars,0.5,1,0.6
+Game of chess where winner gets a $1 000 000,0.5,1,0.6
 Invest in a time machine?,0.5,1,0.8
 Buy Robux?,0.5,1,1
-I'll have two number nines. A number nine large. A number six with extra dip,0.5,1,1
-Ask if they would like to trade places with a unicorn for a day,0.6,0,0.7
+I'll have two number 9s. A number 9 large,0.5,1,1
+Trade places with a unicorn for a day,0.6,0,0.7
 Clown costumes Fridays!,0.6,0.1,0.8
 Send them on a hot air balloon adventure,0.6,0.2,0.4
 Sign them up for Ghost hunting 101,0.6,0.2,0.7
@@ -127,3 +127,12 @@ Give them a gamer chair,1,1,0.2
 Eat the rich!,1,1,0.5
 Give them a annual 1$ bonus,1,1,1
 Give them a new 1990s car,1,1,1
+Give them a severence package and apologize,1,0.1,0.1
+We could sell stocks and leave,0,0.3,0.4
+Spin this and shift the blame onto them,0.1,0.8,0
+I think I'm quitting,1,0.2,0.2
+Support them. You always were a bad CEO,1,0.4,0.7
+We could pay off the feds,0,0.6,0.4
+Hawaii is an option,0.7,0.2,0.9
+Take the company and push it somewhere else,0.8,0,1
+the worst part: jail with you losers,0,0.5,0.6
