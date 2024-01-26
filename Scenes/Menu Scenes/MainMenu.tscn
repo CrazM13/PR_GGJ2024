@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://eao0wesfmqf6"]
+[gd_scene load_steps=17 format=3 uid="uid://eao0wesfmqf6"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
@@ -8,10 +8,14 @@
 [ext_resource type="Resource" uid="uid://c3mqm4qua4drb" path="res://Assets/UI/Animations/TitleAnimation.tres" id="3_vh41y"]
 [ext_resource type="Texture2D" uid="uid://dy3hhthid44v1" path="res://Assets/UI/Sprites/IconCredits.png" id="4_jon60"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="5_vbjku"]
+[ext_resource type="Texture2D" uid="uid://oixtpag5axov" path="res://Assets/UI/Main Menu/Main_Menu_3.png" id="6_de8nr"]
 [ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="6_qd6yo"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
+[ext_resource type="Texture2D" uid="uid://dsgx0gps1n5o7" path="res://Assets/UI/Main Menu/Boss/Boss_Angry_Symbol.png" id="7_mna0l"]
 [ext_resource type="Resource" uid="uid://nw0jes4w6n8q" path="res://Assets/UI/Animations/MenuButtonAnimation.tres" id="7_pkfdv"]
-[ext_resource type="Texture2D" uid="uid://cswa2jmpbtuou" path="res://Assets/Backgrounds/Main_Menu_2.png" id="8_r7mdi"]
+[ext_resource type="Texture2D" uid="uid://bikqak1q183bs" path="res://Assets/UI/Main Menu/Boss/Boss_Arm_Left.png" id="8_u14mr"]
+[ext_resource type="Texture2D" uid="uid://be744fmc87grx" path="res://Assets/UI/Main Menu/Boss/Boss_Arm_Right.png" id="9_jam4d"]
+[ext_resource type="Texture2D" uid="uid://kroelbslcjwa" path="res://Assets/UI/Main Menu/Boss/Head copy.png" id="10_nk6p8"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -70,9 +74,30 @@ z_index = -1
 texture_filter = 1
 position = Vector2(0, -2)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_r7mdi")
+texture = ExtResource("6_de8nr")
 centered = false
 region_rect = Rect2(0, 0, 910, 512)
+
+[node name="BossAngrySymbol" type="Sprite2D" parent="Background"]
+z_index = 1
+position = Vector2(1510, 240)
+texture = ExtResource("7_mna0l")
+
+[node name="BossArmLeft" type="Sprite2D" parent="Background"]
+z_index = 1
+position = Vector2(1653.33, 701.667)
+texture = ExtResource("8_u14mr")
+offset = Vector2(58.3334, -258.333)
+
+[node name="BossArmRight" type="Sprite2D" parent="Background"]
+position = Vector2(1368.33, 663.333)
+texture = ExtResource("9_jam4d")
+offset = Vector2(-28.3331, -265)
+
+[node name="HeadCopy" type="Sprite2D" parent="Background"]
+position = Vector2(1515, 551.667)
+texture = ExtResource("10_nk6p8")
+offset = Vector2(43.3334, -158.333)
 
 [node name="Options Container" type="Control" parent="."]
 custom_minimum_size = Vector2(368, 512)
