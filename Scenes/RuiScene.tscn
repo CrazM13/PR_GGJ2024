@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqvmmvbhb4cwh"]
+[gd_scene load_steps=8 format=3 uid="uid://dqvmmvbhb4cwh"]
 
 [ext_resource type="Texture2D" uid="uid://dkks4sjxgkl1p" path="res://icon.svg" id="1_jl4we"]
 [ext_resource type="Texture2D" uid="uid://da34vkml3akjf" path="res://Assets/Catapult Assets/House.png" id="2_w83jg"]
 [ext_resource type="Texture2D" uid="uid://m54pvq6sieu5" path="res://Assets/Catapult Assets/Window.png" id="3_irla4"]
+[ext_resource type="Script" path="res://Scripts/CatapultScripts/Launch.cs" id="4_b401d"]
 [ext_resource type="PackedScene" uid="uid://dxf17wple32xm" path="res://Assets/Catapult Assets/arrow.tscn" id="4_mnqxs"]
-[ext_resource type="Script" path="res://Assets/Catapult Assets/arrow.cs" id="5_2jlcl"]
+[ext_resource type="Script" path="res://Scripts/CatapultScripts/arrow.cs" id="5_2jlcl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n58o8"]
 size = Vector2(128.176, 130.133)
@@ -35,6 +36,7 @@ texture = ExtResource("2_w83jg")
 position = Vector2(21, 106)
 scale = Vector2(0.416666, 0.0574075)
 texture = ExtResource("3_irla4")
+script = ExtResource("4_b401d")
 
 [node name="Arrow" parent="." node_paths=PackedStringArray("Window") instance=ExtResource("4_mnqxs")]
 position = Vector2(18, 107)
