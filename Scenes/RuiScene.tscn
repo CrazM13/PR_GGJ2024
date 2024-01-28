@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqvmmvbhb4cwh"]
+[gd_scene load_steps=9 format=3 uid="uid://dqvmmvbhb4cwh"]
 
 [ext_resource type="Texture2D" uid="uid://dkks4sjxgkl1p" path="res://icon.svg" id="1_jl4we"]
+[ext_resource type="Texture2D" uid="uid://c2i62wsa22lmo" path="res://Assets/Catapult Assets/Building.png" id="1_p8sl6"]
 [ext_resource type="Texture2D" uid="uid://da34vkml3akjf" path="res://Assets/Catapult Assets/House.png" id="2_w83jg"]
 [ext_resource type="Texture2D" uid="uid://m54pvq6sieu5" path="res://Assets/Catapult Assets/Window.png" id="3_irla4"]
 [ext_resource type="Script" path="res://Scripts/CatapultScripts/Launch.cs" id="4_b401d"]
@@ -14,9 +15,9 @@ size = Vector2(128.176, 130.133)
 position = Vector2(13, 80)
 
 [node name="Building" type="Sprite2D" parent="."]
-position = Vector2(18.5, 232.5)
-scale = Vector2(0.429688, 4.64844)
-texture = ExtResource("1_jl4we")
+position = Vector2(12, 222)
+scale = Vector2(0.25, 1)
+texture = ExtResource("1_p8sl6")
 
 [node name="Lawn" type="Sprite2D" parent="."]
 position = Vector2(774.5, 538)
@@ -26,6 +27,7 @@ texture = ExtResource("1_jl4we")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lawn"]
 position = Vector2(0.263367, -3.19995)
 shape = SubResource("RectangleShape2D_n58o8")
+one_way_collision = true
 
 [node name="House" type="Sprite2D" parent="."]
 position = Vector2(1046, 430)
@@ -33,13 +35,13 @@ scale = Vector2(0.159976, 0.263986)
 texture = ExtResource("2_w83jg")
 
 [node name="Window" type="Sprite2D" parent="."]
-position = Vector2(21, 106)
+position = Vector2(13, 113)
 scale = Vector2(0.416666, 0.0574075)
 texture = ExtResource("3_irla4")
 script = ExtResource("4_b401d")
 
 [node name="Arrow" parent="." node_paths=PackedStringArray("Window") instance=ExtResource("4_mnqxs")]
-position = Vector2(18, 107)
+position = Vector2(12, 112)
 scale = Vector2(0.393333, 0.435)
 script = ExtResource("5_2jlcl")
 Window = NodePath("../Window")

@@ -18,7 +18,6 @@ public partial class arrow : Sprite2D
         mousePosition = GetViewport().GetMousePosition();
         Vector2 rotationDifference = new Vector2(mousePosition.X - Window.Position.X, mousePosition.Y - Window.Position.Y);
         rotationAngle = MathF.Atan2(rotationDifference.Y, rotationDifference.X);
-        GD.Print(rotationAngle);
         if (rotationAngle > -1 && rotationAngle < .5) 
         {
             this.Rotation = rotationAngle;

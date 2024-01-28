@@ -21,7 +21,7 @@ public partial class victim : Sprite2D
     {
         GD.Print(this.Position);
         this.Position += new Vector2(velocity.X * (float) delta, velocity.Y * (float) delta);
-        velocity += slowingDrift*(float)delta;
+        velocity.Y += gravity*(float)delta;
         if (velocity.X > 0)
         {
             velocity.X += -0.2f;
