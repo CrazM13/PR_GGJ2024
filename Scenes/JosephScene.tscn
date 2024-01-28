@@ -1295,7 +1295,7 @@ tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [PackedStringArray("That\'s it. I\'m getting the catapault!")],
+"args": [PackedStringArray("That\'s it. I\'m getting the catapult!")],
 "method": &"QueueTexts"
 }]
 }
