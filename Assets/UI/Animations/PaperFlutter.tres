@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dmp7qe7ki1yb2"]
+
+[ext_resource type="Script" path="res://Scripts/UI/SpriteEffect/SpriteEffect.cs" id="1_ceejf"]
+
+[sub_resource type="Curve" id="Curve_vxkv2"]
+min_value = -10.0
+max_value = 10.0
+_data = [Vector2(0, -10), 0.0, 0.0, 0, 0, Vector2(0.5, 10), 0.0, 0.0, 0, 0, Vector2(1, -10), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[resource]
+script = ExtResource("1_ceejf")
+speed = 1.0
+strength = 1.0
+growAnimation = false
+growthSpeed = 1.0
+squashMode = false
+squashOffset = 0.5
+rotateAnimation = true
+rotateSpeed = 0.1
+rotateCurve = SubResource("Curve_vxkv2")

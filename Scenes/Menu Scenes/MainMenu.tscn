@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://eao0wesfmqf6"]
+[gd_scene load_steps=28 format=3 uid="uid://eao0wesfmqf6"]
 
 [ext_resource type="Theme" uid="uid://cxtiw3a3c14hy" path="res://Assets/UI/Themes/MainMenu.tres" id="1_n6i77"]
 [ext_resource type="Texture2D" uid="uid://cdd07n2orpyjc" path="res://Assets/UI/Sprites/IconPlay.png" id="2_6q21s"]
@@ -8,8 +8,8 @@
 [ext_resource type="Resource" uid="uid://c3mqm4qua4drb" path="res://Assets/UI/Animations/TitleAnimation.tres" id="3_vh41y"]
 [ext_resource type="Texture2D" uid="uid://dy3hhthid44v1" path="res://Assets/UI/Sprites/IconCredits.png" id="4_jon60"]
 [ext_resource type="Texture2D" uid="uid://dwlv2350y6x3h" path="res://Assets/UI/Sprites/IconQuit.png" id="5_vbjku"]
-[ext_resource type="Texture2D" uid="uid://oixtpag5axov" path="res://Assets/UI/Main Menu/Main_Menu_3.png" id="6_de8nr"]
 [ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="6_qd6yo"]
+[ext_resource type="Texture2D" uid="uid://bjoum0nxkpxec" path="res://Assets/UI/Main Menu/Main_Menu_4.png" id="6_vtw6l"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="6_x34nf"]
 [ext_resource type="Texture2D" uid="uid://dsgx0gps1n5o7" path="res://Assets/UI/Main Menu/Boss/Boss_Angry_Symbol.png" id="7_mna0l"]
 [ext_resource type="Resource" uid="uid://nw0jes4w6n8q" path="res://Assets/UI/Animations/MenuButtonAnimation.tres" id="7_pkfdv"]
@@ -21,6 +21,12 @@
 [ext_resource type="Resource" uid="uid://bk2y35ciwn25x" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetArmRight.tres" id="11_708y4"]
 [ext_resource type="Resource" uid="uid://cl4x0ny47j2un" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetHead.tres" id="12_ywuha"]
 [ext_resource type="Resource" uid="uid://b6llrrodqn7bh" path="res://Assets/UI/Animations/MainMenuBossPuppet/BossPuppetAnger.tres" id="15_xgpuv"]
+[ext_resource type="Texture2D" uid="uid://b76di4tbmlldf" path="res://Assets/UI/Main Menu/Paper 1.png" id="16_r26j2"]
+[ext_resource type="Texture2D" uid="uid://ba8eb4jkap60x" path="res://Assets/UI/Main Menu/Paper 2.png" id="17_2w5q1"]
+[ext_resource type="Resource" uid="uid://dmp7qe7ki1yb2" path="res://Assets/UI/Animations/PaperFlutter.tres" id="17_stk68"]
+[ext_resource type="Texture2D" uid="uid://bnmu3ps6xptrm" path="res://Assets/UI/Main Menu/Paper 3.png" id="18_f0ycr"]
+[ext_resource type="Texture2D" uid="uid://du6rybpg027l3" path="res://Assets/UI/Main Menu/Paper 4.png" id="19_gxit2"]
+[ext_resource type="Texture2D" uid="uid://p06s4o2n1xao" path="res://Assets/UI/Main Menu/Paper 5.png" id="20_yu2ys"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -75,16 +81,18 @@ volume_db = -20.0
 autoplay = true
 
 [node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+z_index = -20
+z_as_relative = false
 texture_filter = 1
 position = Vector2(0, -2)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("6_de8nr")
+texture = ExtResource("6_vtw6l")
 centered = false
 region_rect = Rect2(0, 0, 910, 512)
 
 [node name="BossArmLeft" type="Sprite2D" parent="Background"]
 z_index = 1
+z_as_relative = false
 position = Vector2(1653.33, 701.667)
 texture = ExtResource("8_u14mr")
 offset = Vector2(58.3334, -258.333)
@@ -93,6 +101,8 @@ timeOffset = 0.0
 effect = ExtResource("9_uqvkn")
 
 [node name="BossArmRight" type="Sprite2D" parent="Background"]
+z_index = -10
+z_as_relative = false
 position = Vector2(1368.33, 663.333)
 texture = ExtResource("9_jam4d")
 offset = Vector2(-28.3331, -265)
@@ -101,6 +111,7 @@ timeOffset = 0.7
 effect = ExtResource("11_708y4")
 
 [node name="HeadCopy" type="Sprite2D" parent="Background"]
+z_as_relative = false
 position = Vector2(1515, 551.667)
 texture = ExtResource("10_nk6p8")
 offset = Vector2(43.3334, -158.333)
@@ -114,6 +125,40 @@ position = Vector2(-5, -311.667)
 texture = ExtResource("7_mna0l")
 script = ExtResource("8_a0h17")
 effect = ExtResource("15_xgpuv")
+
+[node name="Papers" type="Node2D" parent="Background"]
+
+[node name="Paper1" type="Sprite2D" parent="Background/Papers"]
+z_index = -15
+z_as_relative = false
+position = Vector2(1211.67, 88.3333)
+texture = ExtResource("16_r26j2")
+script = ExtResource("8_a0h17")
+effect = ExtResource("17_stk68")
+
+[node name="Paper2" type="Sprite2D" parent="Background/Papers"]
+position = Vector2(1795, -16.6667)
+texture = ExtResource("17_2w5q1")
+script = ExtResource("8_a0h17")
+effect = ExtResource("17_stk68")
+
+[node name="Paper3" type="Sprite2D" parent="Background/Papers"]
+position = Vector2(1071.67, 698.333)
+texture = ExtResource("18_f0ycr")
+script = ExtResource("8_a0h17")
+effect = ExtResource("17_stk68")
+
+[node name="Paper4" type="Sprite2D" parent="Background/Papers"]
+position = Vector2(1865.83, 692.667)
+texture = ExtResource("19_gxit2")
+script = ExtResource("8_a0h17")
+effect = ExtResource("17_stk68")
+
+[node name="Paper5" type="Sprite2D" parent="Background/Papers"]
+position = Vector2(899.167, 267.667)
+texture = ExtResource("20_yu2ys")
+script = ExtResource("8_a0h17")
+effect = ExtResource("17_stk68")
 
 [node name="Options Container" type="Control" parent="."]
 custom_minimum_size = Vector2(368, 512)
