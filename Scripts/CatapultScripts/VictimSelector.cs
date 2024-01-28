@@ -33,6 +33,6 @@ public partial class VictimSelector : AnimatedSprite2D {
 		//}
 		//
 		//this.Animation = $"BP{selected + 1} Panic";
-		this.Animation = $"BP{rng.RandiRange(0, 2)} Panic";
+		this.Animation = $"BP{rng.RandiRange(1, 3)} Panic";
 	}
 }

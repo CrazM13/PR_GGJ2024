@@ -101,6 +101,8 @@ scale = Vector2(0.417, 0.1)
 texture = ExtResource("3_irla4")
 script = ExtResource("4_b401d")
 changeSceneTimer = NodePath("../SceneManagement/Timer")
+VelocityX = null
+VelocityY = null
 
 [node name="Light" type="Sprite2D" parent="Window"]
 z_index = -1
@@ -113,6 +115,7 @@ position = Vector2(12, 112)
 scale = Vector2(0.393333, 0.435)
 script = ExtResource("5_2jlcl")
 Window = NodePath("../Window")
+mousePosition = null
 
 [node name="SceneManagement" type="Node" parent="."]
 script = ExtResource("8_upuq7")

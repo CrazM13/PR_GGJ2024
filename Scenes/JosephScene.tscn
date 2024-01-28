@@ -2459,6 +2459,7 @@ audio = NodePath("../../KeySFX")
 speed = 25.0
 clearOnComplete = true
 spliceData = Array[Resource]([ExtResource("4_a6gw5"), ExtResource("5_oxmn8")])
+centerText = null
 
 [node name="CharacterTextBox" type="NinePatchRect" parent="Cutscene/CanvasLayer/Control"]
 visible = false
@@ -2507,6 +2508,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+clearOnComplete = null
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
 centerText = true
 
@@ -2557,6 +2559,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+clearOnComplete = null
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
 centerText = true
 
@@ -2607,6 +2610,7 @@ script = ExtResource("2_3fu8g")
 cutscene = NodePath("../../../../AnimationPlayer")
 audio = NodePath("../../KeySFX")
 speed = 25.0
+clearOnComplete = null
 spliceData = Array[Resource]([ExtResource("10_osbqw")])
 centerText = true
 

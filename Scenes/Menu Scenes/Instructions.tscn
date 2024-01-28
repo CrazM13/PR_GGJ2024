@@ -128,6 +128,7 @@ expand_icon = true
 script = ExtResource("6_s1mng")
 effect = ExtResource("7_ikdfu")
 resetOnMouseExit = true
+manualConnect = null
 
 [node name="Quit" type="Button" parent="Options Container"]
 custom_minimum_size = Vector2(512, 0)
@@ -143,6 +144,7 @@ expand_icon = true
 script = ExtResource("6_s1mng")
 effect = ExtResource("7_ikdfu")
 resetOnMouseExit = true
+manualConnect = null
 
 [connection signal="pressed" from="Options Container/Play" to="MarginContainer/SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
 [connection signal="pressed" from="Options Container/Quit" to="MarginContainer/SceneManager" method="Quit"]
