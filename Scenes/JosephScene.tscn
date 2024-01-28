@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=31 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="AudioStream" uid="uid://ccsyjvhapcggi" path="res://Assets/Sounds/Reactions/Ay Dios Mios Edit.wav" id="1_ooy4j"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/Effects/UIHoverEffect.cs" id="12_wkc8w"]
 [ext_resource type="Resource" uid="uid://ie0ntjl77mia" path="res://Assets/UI/Animations/IdeaButtonAnimation.tres" id="13_dlo0v"]
 [ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="14_l6qcd"]
+[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="17_bvuxi"]
 
 [sub_resource type="Animation" id="Animation_pro8y"]
 resource_name = "JudgingEnd"
@@ -187,11 +188,14 @@ tracks/13/path = NodePath("Cutscene/CanvasLayer/Control/CharacterTextBox3/Text")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": ["[REACTION]"],
 "method": &"SetText"
+}, {
+"args": [true],
+"method": &"AllowInput"
 }]
 }
 tracks/14/type = "method"
@@ -2300,8 +2304,26 @@ tracks/14/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_g6o68"]
+resource_name = "EndScene"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneManager")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://Scenes/RuiScene.tscn"],
+"method": &"ChangeScene"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gy0st"]
 _data = {
+"EndScene": SubResource("Animation_g6o68"),
 "JudgingEnd": SubResource("Animation_pro8y"),
 "JudgingIdea1": SubResource("Animation_ak8d6"),
 "JudgingIdea2": SubResource("Animation_pwd2u"),
@@ -2326,7 +2348,7 @@ libraries = {
 }
 speed_scale = 0.75
 script = ExtResource("1_088j6")
-sceneList = PackedStringArray("Prompt", "PromptStage1.5", "PromptStage2", "PromptStage3", "JudgingIdea1", "JudgingIdea2", "JudgingIdea3", "JudgingStage2", "JudgingStage3", "JudgingEnd")
+sceneList = PackedStringArray("Prompt", "PromptStage1.5", "PromptStage2", "PromptStage3", "JudgingIdea1", "JudgingIdea2", "JudgingIdea3", "JudgingStage2", "JudgingStage3", "JudgingEnd", "EndScene")
 
 [node name="Background" type="Sprite2D" parent="Cutscene"]
 texture_filter = 1
@@ -2684,6 +2706,9 @@ volume_db = -10.0
 stream = ExtResource("14_l6qcd")
 volume_db = -20.0
 autoplay = true
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("17_bvuxi")
 
 [connection signal="mouse_entered" from="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator" method="OnMouseEnter"]
 [connection signal="mouse_exited" from="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator/Idea 1" to="Cutscene/CanvasLayer/Control/Ideas/Idea1 Animator" method="OnMouseExit"]
