@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-public partial class UIEffect : BaseEffect<Control> {
+public partial class UIEffect : PRBaseUIEffect<Control> {
 
 	public override void PlayEffect(Control target, float animationTime) {
 

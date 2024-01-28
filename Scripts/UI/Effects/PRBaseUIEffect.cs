@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public abstract partial class BaseEffect<T> : Resource where T : Node {
+public abstract partial class PRBaseUIEffect<T> : Resource where T : Node {
 
 	#region Inspector
 	// Global properites

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class SpriteEffect : BaseEffect<Sprite2D> {
+public partial class SpriteEffect : PRBaseUIEffect<Sprite2D> {
 
 	public override void PlayEffect(Sprite2D target, float animationTime) {
 

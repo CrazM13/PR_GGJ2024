@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qi5p17nq6mfr"]
+
+[ext_resource type="Script" path="res://Scripts/UI/TextResources/ConvertToCSV.cs" id="1_e4keu"]
+
+[node name="Tmp" type="Node"]
+script = ExtResource("1_e4keu")
+path = "res://Assets/TextData/ThreatCSV.txt"
+newName = "ThreatCSV.tres"

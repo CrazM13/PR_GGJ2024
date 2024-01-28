@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/UI/TextResources/TextResource.cs" id="1_86rdr"]
+
+[resource]
+script = ExtResource("1_86rdr")
+Lines = PackedStringArray("Text", "me mallet", "awkwardly singing Happy Birthday", "a kick to the shin", "a slice of bread", "dirty underpants", "a vacation to Florida", "the state of Brazil", "a three hour unboxing", "a coupon to unemployment", "a goose", "an hour of mumble rap", "the downstairs toilet", "your mom", "a dentist appointment", "a tuna sandwich", "this lima bean", "an old wrench I found", "having to write all these threats", "getting their wisdom teeth out", "mandatory overtime", "Skibidi Toilet", "bda spelilgn", "a raise", "a demotion", "a promotion", "a new cat", "an old lady", "my dad\'s cane", "a nuke", "laughter", "37 compilier errors", "\"life, liberty, and the pursuit of happiness\"", "a polar bear", "a donkey", "a horse", "PO TA TO", "an arrow to the knee", "AI", "a devilishly handsome man", "a tornado", "a pizza", "sushi", "avacado toast")

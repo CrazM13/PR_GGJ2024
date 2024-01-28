@@ -1,47 +1,142 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqvmmvbhb4cwh"]
+[gd_scene load_steps=16 format=3 uid="uid://dqvmmvbhb4cwh"]
 
-[ext_resource type="Texture2D" uid="uid://dkks4sjxgkl1p" path="res://icon.svg" id="1_jl4we"]
-[ext_resource type="Texture2D" uid="uid://c2i62wsa22lmo" path="res://Assets/Catapult Assets/Building.png" id="1_p8sl6"]
+[ext_resource type="Texture2D" uid="uid://dqv7oybq5s66t" path="res://Assets/Catapult Assets/Sky.png" id="1_otv3s"]
+[ext_resource type="Texture2D" uid="uid://cmc6i56ruvj31" path="res://Assets/Catapult Assets/SkyLine.png" id="2_5l24k"]
 [ext_resource type="Texture2D" uid="uid://da34vkml3akjf" path="res://Assets/Catapult Assets/House.png" id="2_w83jg"]
 [ext_resource type="Texture2D" uid="uid://m54pvq6sieu5" path="res://Assets/Catapult Assets/Window.png" id="3_irla4"]
 [ext_resource type="Script" path="res://Scripts/CatapultScripts/Launch.cs" id="4_b401d"]
 [ext_resource type="PackedScene" uid="uid://dxf17wple32xm" path="res://Assets/Catapult Assets/arrow.tscn" id="4_mnqxs"]
 [ext_resource type="Script" path="res://Scripts/CatapultScripts/arrow.cs" id="5_2jlcl"]
+[ext_resource type="Texture2D" uid="uid://eslfkjsxhg4u" path="res://Assets/Catapult Assets/Light.png" id="6_capxu"]
+[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="8_upuq7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5vp7"]
+size = Vector2(74, 1078.35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2jb8"]
+size = Vector2(64, 29.7703)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n58o8"]
-size = Vector2(128.176, 130.133)
+size = Vector2(73, 1076)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h2x6"]
+size = Vector2(107, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvg6v"]
+size = Vector2(1920, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pli5w"]
+size = Vector2(100, 1920)
 
 [node name="RuiScene" type="Node2D"]
 position = Vector2(13, 80)
 
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(559, 278)
+scale = Vector2(1.59333, 1.59333)
+texture = ExtResource("1_otv3s")
+
+[node name="SkyLine" type="Sprite2D" parent="Sky"]
+position = Vector2(156.276, 62.7615)
+scale = Vector2(0.527197, 0.527197)
+texture = ExtResource("2_5l24k")
+
+[node name="SkyLine2" type="Sprite2D" parent="Sky"]
+position = Vector2(-247.28, 69.6653)
+scale = Vector2(-0.527, 0.527)
+texture = ExtResource("2_5l24k")
+
 [node name="Building" type="Sprite2D" parent="."]
-position = Vector2(12, 222)
-scale = Vector2(0.25, 1)
-texture = ExtResource("1_p8sl6")
+position = Vector2(-9, 244.5)
+scale = Vector2(1, 0.60463)
+texture = ExtResource("3_irla4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/StaticBody2D"]
+position = Vector2(-15, -0.826955)
+shape = SubResource("RectangleShape2D_t5vp7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Building/StaticBody2D"]
+position = Vector2(22, 134.793)
+shape = SubResource("RectangleShape2D_b2jb8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Building/StaticBody2D"]
+position = Vector2(22, -525.115)
+shape = SubResource("RectangleShape2D_b2jb8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Building/StaticBody2D"]
+position = Vector2(22, 525.115)
+shape = SubResource("RectangleShape2D_b2jb8")
 
 [node name="Lawn" type="Sprite2D" parent="."]
 position = Vector2(774.5, 538)
-scale = Vector2(5.69531, 0.46875)
-texture = ExtResource("1_jl4we")
+rotation = -1.5708
+texture = ExtResource("3_irla4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lawn"]
-position = Vector2(0.263367, -3.19995)
+[node name="StaticBody2D" type="StaticBody2D" parent="Lawn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lawn/StaticBody2D"]
+position = Vector2(-13.5, 0.5)
 shape = SubResource("RectangleShape2D_n58o8")
 one_way_collision = true
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lawn/StaticBody2D"]
+position = Vector2(0.500183, -525.5)
+shape = SubResource("RectangleShape2D_6h2x6")
+
 [node name="House" type="Sprite2D" parent="."]
-position = Vector2(1046, 430)
-scale = Vector2(0.159976, 0.263986)
+position = Vector2(1193, 241)
 texture = ExtResource("2_w83jg")
 
-[node name="Window" type="Sprite2D" parent="."]
-position = Vector2(13, 113)
-scale = Vector2(0.416666, 0.0574075)
+[node name="StaticBody2D" type="StaticBody2D" parent="House"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="House/StaticBody2D"]
+polygon = PackedVector2Array(-361, 282, 370, 285, 370, 36, 420, 36, 300, -173, -187, -289, -220, -149, -424, 30, -363, 30)
+
+[node name="Window" type="Sprite2D" parent="." node_paths=PackedStringArray("changeSceneTimer")]
+position = Vector2(23, 111)
+scale = Vector2(0.417, 0.1)
 texture = ExtResource("3_irla4")
 script = ExtResource("4_b401d")
+changeSceneTimer = NodePath("../SceneManagement/Timer")
+
+[node name="Light" type="Sprite2D" parent="Window"]
+z_index = -1
+position = Vector2(98.3214, 50)
+scale = Vector2(0.607029, 3.71094)
+texture = ExtResource("6_capxu")
 
 [node name="Arrow" parent="." node_paths=PackedStringArray("Window") instance=ExtResource("4_mnqxs")]
 position = Vector2(12, 112)
 scale = Vector2(0.393333, 0.435)
 script = ExtResource("5_2jlcl")
 Window = NodePath("../Window")
+
+[node name="SceneManagement" type="Node" parent="."]
+script = ExtResource("8_upuq7")
+
+[node name="Timer" type="Timer" parent="SceneManagement"]
+wait_time = 10.0
+one_shot = true
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(668, 619)
+shape = SubResource("RectangleShape2D_gvg6v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(670, -583)
+shape = SubResource("RectangleShape2D_gvg6v")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1191, -121)
+shape = SubResource("RectangleShape2D_pli5w")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(-64, -117)
+shape = SubResource("RectangleShape2D_pli5w")
+
+[connection signal="timeout" from="SceneManagement/Timer" to="SceneManagement" method="ChangeScene" binds= [&"res://Scenes/Menu Scenes/MainMenu.tscn"]]

@@ -7,23 +7,27 @@ public partial class TextSplices : Resource {
 	[Export] public string Key { get; set; }
 
 	public List<string> Values { get; set; }
-	[Export] public string pathToText;
+	[Export] private TextResource file;
 
 	private RandomNumberGenerator rng = new();
 
 	public void Initialize() {
-		FileAccess file = FileAccess.Open(pathToText, FileAccess.ModeFlags.Read);
+		//FileAccess file = FileAccess.Open(pathToText, FileAccess.ModeFlags.Read);
 		Values = new List<string>();
+		//
+		//// Discard header
+		//file.GetLine();
+		//while (!file.EofReached()) {
+		//	string line = file.GetLine();
+		//	if (line != string.Empty) {
+		//		Values.Add(line);
+		//	}
+		//}
+		//file.Close();
 
-		// Discard header
-		file.GetLine();
-		while (!file.EofReached()) {
-			string line = file.GetLine();
-			if (line != string.Empty) {
-				Values.Add(line);
-			}
+		for (int i = 1; i < file.Lines.Length; i++) {
+			Values.Add(file.Lines[i]);
 		}
-		file.Close();
 	}
 
 	public string GetRandomSplice() {

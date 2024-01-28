@@ -94,8 +94,10 @@ offset_right = -97.0
 offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 24
-text = "How to play: Click an option. yay"
+theme_override_font_sizes/font_size = 36
+text = "Click to advance dialogue
+Select an option to suggest
+Click to fire the catapult!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

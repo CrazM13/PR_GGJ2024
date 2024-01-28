@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class IdeaManager {
 
-	private const string PATH_TO_FILE = "res://Assets/TextData/IdeaCSV.txt";
+	private const string PATH_TO_FILE = "res://Assets/TextData/IdeaCSV.tres";//"res://Assets/TextData/IdeaCSV.txt";
 
 	private static IdeaManager instance;
 	public static IdeaManager Instance {
@@ -47,18 +47,27 @@ public class IdeaManager {
 	}
 
 	private void LoadIdeas() {
-		FileAccess file = FileAccess.Open(PATH_TO_FILE, FileAccess.ModeFlags.Read);
+		//FileAccess file = FileAccess.Open(PATH_TO_FILE, FileAccess.ModeFlags.Read);
+		//
+		//// Discard header
+		//file.GetLine();
+		//while (!file.EofReached()) {
+		//	string line = file.GetLine();
+		//	if (line != string.Empty) {
+		//		string[] values = line.Split(',');
+		//		ideas.Add(new Idea(values[0], (byte) (float.Parse(values[1]) * 255), (byte) (float.Parse(values[2]) * 255), (byte) (float.Parse(values[3]) * 255)));
+		//	}
+		//}
+		//file.Close();
 
-		// Discard header
-		file.GetLine();
-		while (!file.EofReached()) {
-			string line = file.GetLine();
-			if (line != string.Empty) {
-				string[] values = line.Split(',');
-				ideas.Add(new Idea(values[0], (byte) (float.Parse(values[1]) * 255), (byte) (float.Parse(values[2]) * 255), (byte) (float.Parse(values[3]) * 255)));
-			}
+		TextResource resource = GD.Load<TextResource>(PATH_TO_FILE);
+
+		for (int i = 1; i < resource.Lines.Length; i++) {
+			string[] values = resource.Lines[i].Split(',');
+
+			ideas.Add(new Idea(values[0], (byte) (float.Parse(values[1]) * 255), (byte) (float.Parse(values[2]) * 255), (byte) (float.Parse(values[3]) * 255)));
 		}
-		file.Close();
+
 	}
 
 }

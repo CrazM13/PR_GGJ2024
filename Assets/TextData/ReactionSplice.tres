@@ -1,8 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b4ks4uca7638v"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b4ks4uca7638v"]
 
 [ext_resource type="Script" path="res://Scripts/UI/TextSplices.cs" id="1_d3shl"]
+[ext_resource type="Resource" path="res://Assets/TextData/ReactionsCSV.tres" id="1_tqjap"]
 
 [resource]
 script = ExtResource("1_d3shl")
 Key = "REACTION"
-pathToText = "res://Assets/TextData/ReactionsCSV.txt"
+file = ExtResource("1_tqjap")

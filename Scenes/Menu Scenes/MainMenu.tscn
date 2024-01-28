@@ -64,7 +64,7 @@ effect = ExtResource("3_vh41y")
 
 [node name="Title" type="Label" parent="MarginContainer/Title Container/CenterContainer"]
 layout_mode = 2
-text = "Title of the Game"
+text = "Executive Decision"
 
 [node name="SceneManager" type="Node" parent="."]
 script = ExtResource("6_x34nf")

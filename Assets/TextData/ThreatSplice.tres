@@ -1,8 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://chd1b40khvu6d"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://chd1b40khvu6d"]
 
 [ext_resource type="Script" path="res://Scripts/UI/TextSplices.cs" id="1_7mchj"]
+[ext_resource type="Resource" path="res://Assets/TextData/ThreatCSV.tres" id="1_u24r3"]
 
 [resource]
 script = ExtResource("1_7mchj")
 Key = "THREAT"
-pathToText = "res://Assets/TextData/ThreatCSV.txt"
+file = ExtResource("1_u24r3")
