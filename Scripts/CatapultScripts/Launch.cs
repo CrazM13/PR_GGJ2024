@@ -6,6 +6,7 @@ public partial class Launch : Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	[Export] private Timer changeSceneTimer;
 	[Export] private AudioStreamPlayer audio;
+	[Export] private PlayRandom scream;
 
     [Export] public int VelocityX;
     [Export] public int VelocityY;
@@ -37,6 +38,7 @@ public partial class Launch : Sprite2D
 
 				changeSceneTimer.Start();
 				audio.Play();
+				scream.PlayRandomAudio();
 			}
         }
 

@@ -113,7 +113,6 @@ z_index = 1
 position = Vector2(-5, -311.667)
 texture = ExtResource("7_mna0l")
 script = ExtResource("8_a0h17")
-timeOffset = null
 effect = ExtResource("15_xgpuv")
 
 [node name="Options Container" type="Control" parent="."]
@@ -151,7 +150,6 @@ expand_icon = true
 script = ExtResource("6_qd6yo")
 effect = ExtResource("7_pkfdv")
 resetOnMouseExit = true
-manualConnect = null
 
 [node name="InstructionsContainer" type="Control" parent="Options Container"]
 custom_minimum_size = Vector2(512, 254)
@@ -174,7 +172,6 @@ expand_icon = true
 script = ExtResource("6_qd6yo")
 effect = ExtResource("7_pkfdv")
 resetOnMouseExit = true
-manualConnect = null
 
 [node name="CreditsContainer" type="Control" parent="Options Container"]
 custom_minimum_size = Vector2(512, 254)
@@ -198,7 +195,6 @@ expand_icon = true
 script = ExtResource("6_qd6yo")
 effect = ExtResource("7_pkfdv")
 resetOnMouseExit = true
-manualConnect = null
 
 [node name="QuitContainer" type="Control" parent="Options Container"]
 custom_minimum_size = Vector2(512, 254)
@@ -221,7 +217,6 @@ expand_icon = true
 script = ExtResource("6_qd6yo")
 effect = ExtResource("7_pkfdv")
 resetOnMouseExit = true
-manualConnect = null
 
 [connection signal="pressed" from="Options Container/PlayContainer/Play" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/JosephScene.tscn"]]
 [connection signal="pressed" from="Options Container/InstructionsContainer/Instructions" to="SceneManager" method="ChangeScene" binds= ["res://Scenes/Menu Scenes/Instructions.tscn"]]
