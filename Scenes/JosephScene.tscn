@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cn2pwo7eix6tg"]
+[gd_scene load_steps=49 format=3 uid="uid://cn2pwo7eix6tg"]
 
 [ext_resource type="Script" path="res://Scripts/UI/CutsceneManager.cs" id="1_088j6"]
 [ext_resource type="AudioStream" uid="uid://ccsyjvhapcggi" path="res://Assets/Sounds/Reactions/Ay Dios Mios Edit.wav" id="1_ooy4j"]
@@ -17,7 +17,24 @@
 [ext_resource type="Resource" uid="uid://ie0ntjl77mia" path="res://Assets/UI/Animations/IdeaButtonAnimation.tres" id="13_dlo0v"]
 [ext_resource type="AudioStream" uid="uid://pvk3lprp7wpx" path="res://Assets/Sounds/Music/InterruptedQuiet.wav" id="14_l6qcd"]
 [ext_resource type="Script" path="res://Scripts/Audio/PlayRandom.cs" id="16_kgl2g"]
+[ext_resource type="AudioStream" uid="uid://b728manlqgf7h" path="res://Assets/Sounds/Reactions/React0.wav" id="17_7bmw1"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="17_bvuxi"]
+[ext_resource type="AudioStream" uid="uid://gvuimusngfmu" path="res://Assets/Sounds/Reactions/React1.wav" id="18_v4f73"]
+[ext_resource type="AudioStream" uid="uid://wafj2kw3tx0u" path="res://Assets/Sounds/Reactions/React2.wav" id="19_m3xew"]
+[ext_resource type="AudioStream" uid="uid://cw5k221modcbs" path="res://Assets/Sounds/Reactions/React3.wav" id="20_aqu85"]
+[ext_resource type="AudioStream" uid="uid://c4vo4ywupg7gm" path="res://Assets/Sounds/Reactions/React4.wav" id="21_flrre"]
+[ext_resource type="AudioStream" uid="uid://dhm6uxc6txyk" path="res://Assets/Sounds/Reactions/React5.wav" id="22_lri2j"]
+[ext_resource type="AudioStream" uid="uid://ccobm1unsnmyy" path="res://Assets/Sounds/Reactions/React6.wav" id="23_udaaa"]
+[ext_resource type="AudioStream" uid="uid://s7enfegynx2v" path="res://Assets/Sounds/Reactions/React7.wav" id="24_3ahtb"]
+[ext_resource type="AudioStream" uid="uid://skejxjeqq20e" path="res://Assets/Sounds/Reactions/React8.wav" id="25_v4wgp"]
+[ext_resource type="AudioStream" uid="uid://41nkvpufcs8a" path="res://Assets/Sounds/Reactions/React9.wav" id="26_2tgtt"]
+[ext_resource type="AudioStream" uid="uid://d1c41756dsuru" path="res://Assets/Sounds/Reactions/React10.wav" id="27_xlvva"]
+[ext_resource type="AudioStream" uid="uid://dlplxbn0pn2nm" path="res://Assets/Sounds/Reactions/React11.wav" id="28_811ih"]
+[ext_resource type="AudioStream" uid="uid://bh5wu68hjs31b" path="res://Assets/Sounds/Reactions/React12.wav" id="29_q1kuv"]
+[ext_resource type="AudioStream" uid="uid://l3k7rf0m7oew" path="res://Assets/Sounds/Reactions/React13.wav" id="30_4va8m"]
+[ext_resource type="AudioStream" uid="uid://bvnjr4scwxv55" path="res://Assets/Sounds/Reactions/React14.wav" id="31_qivk1"]
+[ext_resource type="AudioStream" uid="uid://dv01fo4o5ecy8" path="res://Assets/Sounds/Reactions/React15.wav" id="32_fcahk"]
+[ext_resource type="AudioStream" uid="uid://byoeorwarx6w2" path="res://Assets/Sounds/Reactions/React16.wav" id="33_fdtj4"]
 
 [sub_resource type="Animation" id="Animation_pro8y"]
 resource_name = "JudgingEnd"
@@ -2702,7 +2719,7 @@ volume_db = -5.0
 [node name="ReactionSFX" type="AudioStreamPlayer" parent="Cutscene"]
 volume_db = -10.0
 script = ExtResource("16_kgl2g")
-audioOptions = Array[AudioStream]([ExtResource("1_ooy4j")])
+audioOptions = Array[AudioStream]([ExtResource("1_ooy4j"), ExtResource("17_7bmw1"), ExtResource("18_v4f73"), ExtResource("19_m3xew"), ExtResource("20_aqu85"), ExtResource("21_flrre"), ExtResource("22_lri2j"), ExtResource("23_udaaa"), ExtResource("24_3ahtb"), ExtResource("25_v4wgp"), ExtResource("26_2tgtt"), ExtResource("27_xlvva"), ExtResource("28_811ih"), ExtResource("29_q1kuv"), ExtResource("30_4va8m"), ExtResource("31_qivk1"), ExtResource("32_fcahk"), ExtResource("33_fdtj4")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_l6qcd")
