@@ -12,6 +12,7 @@ public partial class Launch : Sprite2D
     [Export] public int VelocityY;
     private bool isSpawned = false;
     private Node victim;
+	private Node Peffect;
 
 	private bool wasMousePressed = true;
 
@@ -32,9 +33,16 @@ public partial class Launch : Sprite2D
 				// DEBUG // GD.Print("Space is pressed.");
 				isSpawned = true;
 				PackedScene scene = GD.Load<PackedScene>("res://Assets/Launch/victim.tscn");
+				PackedScene effect = GD.Load<PackedScene>("res://Assets/Catapult Assets/Shatter_Effect.tscn");
 				Node node = scene.Instantiate();
+                GpuParticles2D PE = effect.Instantiate() as GpuParticles2D;
 				AddChild(node);
+				GetNode("/root").AddChild(PE);
+				PE.Position = this.GlobalPosition;
+				PE.Emitting = true;
 				victim = node;
+				Peffect = PE;
+				
 
 				changeSceneTimer.Start();
 				audio.Play();
